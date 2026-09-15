@@ -1,6 +1,6 @@
-# Case Management API
+# Customer Support Case Management Backend
 
-A beginner-friendly FastAPI backend for creating, viewing, listing, and updating case records. It uses SQLAlchemy for database access, Pydantic for request and response validation, and SQLite for local development. The database URL is configurable so PostgreSQL can be introduced later without changing the service and route architecture.
+A beginner-friendly FastAPI backend for creating, viewing, listing, and updating customer support cases. A case represents a customer issue raised with a support team, such as a password reset problem, failed payment, account access issue, or service outage. It uses SQLAlchemy for database access, Pydantic for request and response validation, and SQLite for local development. The database URL is configurable so PostgreSQL can be introduced later without changing the service and route architecture.
 
 ## Architecture
 
@@ -11,7 +11,7 @@ FastAPI routes -> service functions -> SQLAlchemy session -> database
 ```
 
 - Routes handle HTTP input, output, and request-specific logging.
-- Services contain case-management business logic.
+- Services contain customer support case-management business logic.
 - Pydantic schemas validate API input and shape API responses.
 - SQLAlchemy models describe the database tables.
 - Central exception handlers provide consistent JSON errors.
@@ -111,10 +111,10 @@ Interactive API documentation:
 | Method | Path | Description | Success |
 | --- | --- | --- | --- |
 | GET | `/health` | Check that the API is running | `200` |
-| POST | `/cases` | Create a case | `201` |
-| GET | `/cases` | List cases with optional `skip` and `limit` query parameters | `200` |
-| GET | `/cases/{case_id}` | Get one case by ID | `200` |
-| PATCH | `/cases/{case_id}` | Partially update a case | `200` |
+| POST | `/cases` | Create a customer support case | `201` |
+| GET | `/cases` | List customer support cases with optional `skip` and `limit` query parameters | `200` |
+| GET | `/cases/{case_id}` | Get one customer support case by ID | `200` |
+| PATCH | `/cases/{case_id}` | Partially update a customer support case | `200` |
 
 There is currently no delete endpoint.
 
@@ -125,8 +125,8 @@ With the server running, create a case from PowerShell:
 ```powershell
 $body = @{
 		case_number = "CASE-001"
-		title = "Example case"
-		description = "A case created from PowerShell"
+		title = "Unable to reset password"
+		description = "Customer receives an error after submitting the password reset form."
 		status = "open"
 		priority = "medium"
 } | ConvertTo-Json
@@ -168,7 +168,7 @@ Unexpected exception details, database information, and stack traces are logged 
 
 ## Logging
 
-The application writes structured JSON logs to standard output. Successful case operations include event names and relevant IDs. Unexpected exceptions are logged with exception details for server-side diagnosis while the API returns only the generic 500 response.
+The application writes structured JSON logs to standard output. Successful customer support case operations include event names and relevant IDs. Unexpected exceptions are logged with exception details for server-side diagnosis while the API returns only the generic 500 response.
 
 ## Tests and Coverage
 

@@ -10,8 +10,8 @@ from app.api.routes import cases as cases_routes
 def case_payload(case_number: str = "CASE-001") -> dict[str, str]:
     return {
         "case_number": case_number,
-        "title": "Initial case",
-        "description": "A test case",
+        "title": "Unable to reset password",
+        "description": "Customer receives an error after submitting the password reset form.",
         "status": "open",
         "priority": "medium",
     }
@@ -31,7 +31,7 @@ def test_create_case(client: TestClient) -> None:
     body = response.json()
     assert body["id"] == 1
     assert body["case_number"] == "CASE-001"
-    assert body["title"] == "Initial case"
+    assert body["title"] == "Unable to reset password"
     assert body["created_at"]
     assert body["updated_at"]
 
@@ -84,16 +84,21 @@ def test_update_existing_case(client: TestClient) -> None:
 
     response = client.patch(
         f"/cases/{case_id}",
-        json={"title": "Updated case", "status": "resolved"},
+        json={
+            "title": "Password reset issue resolved",
+            "status": "resolved",
+        },
     )
 
     assert response.status_code == 200
-    assert response.json()["title"] == "Updated case"
+    assert response.json()["title"] == "Password reset issue resolved"
     assert response.json()["status"] == "resolved"
 
 
 def test_update_nonexistent_case_returns_404(client: TestClient) -> None:
-    response = client.patch("/cases/999", json={"title": "Updated case"})
+    response = client.patch(
+        "/cases/999", json={"title": "Payment failure investigation"}
+    )
 
     assert response.status_code == 404
     assert response.json() == {

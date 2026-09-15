@@ -10,8 +10,8 @@ FROM cases;
 INSERT INTO cases (case_number, title, description, status, priority)
 VALUES (
     'CASE-100',
-    'Example case',
-    'A case inserted for SQL practice.',
+  'Failed payment at checkout',
+  'Customer reports that a card payment fails at checkout despite having sufficient funds.',
     'open',
     'medium'
 );

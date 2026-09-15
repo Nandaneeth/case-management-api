@@ -18,8 +18,11 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(
-    title="Case Management API",
-    description="A beginner-friendly API for managing cases.",
+    title="Customer Support Case Management API",
+    description=(
+        "A beginner-friendly API for managing customer support cases raised by customers "
+        "and handled by a support team."
+    ),
     lifespan=lifespan,
 )
 
