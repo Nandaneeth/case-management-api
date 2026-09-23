@@ -1,0 +1,8 @@
+policy_id,category_code,policy_name,resolution_sla_hours,active
+POL-001,CAT-001,Account Access Recovery,8,true
+POL-002,CAT-002,Password and Security Assistance,12,true
+POL-003,CAT-003,Billing Dispute and Payment Review,24,true
+POL-004,CAT-004,Subscription Change and Cancellation,48,true
+POL-005,CAT-005,Service Availability Incident Response,4,true
+POL-006,CAT-006,Mobile Application Support,16,true
+POL-007,CAT-007,Privacy and Data Request Handling,24,true

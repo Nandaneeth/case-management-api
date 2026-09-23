@@ -1,0 +1,8 @@
+category_code,category_name,department
+CAT-001,Account Access,Identity and Access
+CAT-002,Password and Security,Identity and Access
+CAT-003,Billing and Payments,Billing Operations
+CAT-004,Subscriptions,Billing Operations
+CAT-005,Service Availability,Platform Operations
+CAT-006,Mobile Application,Product Support
+CAT-007,Privacy and Data Requests,Trust and Safety

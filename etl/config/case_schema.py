@@ -39,3 +39,31 @@ CASE_SCHEMA = (
 	ColumnSpec("created_at", "datetime", required=True),
 	ColumnSpec("updated_at", "datetime", required=True),
 )
+
+
+CASE_SOURCE_SCHEMA = CASE_SCHEMA + (
+	ColumnSpec("category_code", "string", required=True),
+)
+
+
+REFERENCE_SCHEMA = (
+	ColumnSpec("category_code", "string", required=True),
+	ColumnSpec("category_name", "string", required=True),
+	ColumnSpec("department", "string", required=True),
+)
+
+
+POLICY_SCHEMA = (
+	ColumnSpec("policy_id", "string", required=True),
+	ColumnSpec("category_code", "string", required=True),
+	ColumnSpec("policy_name", "string", required=True),
+	ColumnSpec("resolution_sla_hours", "integer", required=True),
+	ColumnSpec("active", "boolean", required=True),
+)
+
+
+POLICY_UPDATE_SCHEMA = (
+	ColumnSpec("policy_id", "string", required=True),
+	ColumnSpec("category_code", "string", required=True),
+	ColumnSpec("policy_version", "string", required=True),
+)

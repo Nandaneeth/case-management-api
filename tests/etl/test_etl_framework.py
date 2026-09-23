@@ -9,7 +9,11 @@ from etl.ingestion.csv_reader import read_csv
 from etl.pipeline import PipelinePaths, run_pipeline
 from etl.profiling.profiler import profile_dataset
 from etl.transformations.dataframe_operations import deduplicate_cases, handle_nulls
-from etl.validation.quality_rules import split_valid_and_rejected_records
+from etl.validation.quality_rules import (
+	INVALID_REFERENCE_CATEGORY,
+	split_valid_and_invalid_reference_categories,
+	split_valid_and_rejected_records,
+)
 from etl.validation.reconciliation import reconcile_row_counts
 from etl.validation.schema_validator import validate_schema
 
@@ -137,6 +141,19 @@ def test_reconciliation_returns_passed_and_failed_statuses() -> None:
 	assert all(check.status == "failed" for check in failed.checks)
 
 
+def test_reference_category_check_rejects_only_invalid_codes() -> None:
+	cases = pd.DataFrame(
+		{"case_number": ["CASE-1", "CASE-2"], "category_code": ["CAT-001", "CAT-999"]}
+	)
+	reference = pd.DataFrame({"category_code": ["CAT-001"]})
+
+	valid, rejected = split_valid_and_invalid_reference_categories(cases, reference)
+
+	assert valid["category_code"].tolist() == ["CAT-001"]
+	assert rejected["category_code"].tolist() == ["CAT-999"]
+	assert rejected.iloc[0]["rejection_reason"] == INVALID_REFERENCE_CATEGORY
+
+
 def test_pipeline_is_idempotent_for_same_input(tmp_path: Path) -> None:
 	paths = PipelinePaths(
 		input_path=tmp_path / "cases.csv",
@@ -144,6 +161,7 @@ def test_pipeline_is_idempotent_for_same_input(tmp_path: Path) -> None:
 		rejected_path=tmp_path / "rejected.csv",
 		curated_path=tmp_path / "curated.parquet",
 		checkpoint_path=tmp_path / "checkpoint.json",
+		enrichment_enabled=False,
 	)
 	case_frame().to_csv(paths.input_path, index=False)
 
@@ -158,3 +176,90 @@ def test_pipeline_is_idempotent_for_same_input(tmp_path: Path) -> None:
 	assert second.pipeline_status == "completed_no_new_records"
 	pd.testing.assert_frame_equal(first_standardized, second_standardized)
 	pd.testing.assert_frame_equal(first_curated, second_curated)
+
+
+def test_pipeline_joins_case_reference_policy_and_api_sources(
+	tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+	paths = PipelinePaths(
+		input_path=tmp_path / "cases.csv",
+		reference_path=tmp_path / "reference.csv",
+		policy_metadata_path=tmp_path / "policy.csv",
+		policy_api_url="http://mock-policy-api/policy-updates",
+		standardized_path=tmp_path / "standardized.parquet",
+		rejected_path=tmp_path / "rejected.csv",
+		curated_path=tmp_path / "curated.parquet",
+		checkpoint_path=tmp_path / "checkpoint.json",
+	)
+	cases = pd.concat([case_frame(), case_frame().iloc[[0]]], ignore_index=True)
+	cases["case_number"] = ["CASE-1", "CASE-2", "CASE-3"]
+	cases["category_code"] = ["CAT-001", "CAT-003", "CAT-999"]
+	cases.to_csv(paths.input_path, index=False)
+	pd.DataFrame(
+		[
+			{
+				"category_code": "CAT-001",
+				"category_name": "Account Access",
+				"department": "Identity and Access",
+			},
+			{
+				"category_code": "CAT-003",
+				"category_name": "Billing and Payments",
+				"department": "Billing Operations",
+			},
+		]
+	).to_csv(paths.reference_path, index=False)
+	pd.DataFrame(
+		[
+			{
+				"policy_id": "POL-001",
+				"category_code": "CAT-001",
+				"policy_name": "Account Access Recovery",
+				"resolution_sla_hours": 8,
+				"active": True,
+			},
+			{
+				"policy_id": "POL-003",
+				"category_code": "CAT-003",
+				"policy_name": "Billing Dispute Review",
+				"resolution_sla_hours": 24,
+				"active": True,
+			},
+		]
+	).to_csv(paths.policy_metadata_path, index=False)
+	monkeypatch.setattr(
+		"etl.ingestion.api_reader.ApiReader.read",
+		lambda _reader: pd.DataFrame(
+			[
+				{
+					"policy_id": "POL-001",
+					"category_code": "CAT-001",
+					"policy_version": "2026.09",
+				},
+				{
+					"policy_id": "POL-003",
+					"category_code": "CAT-003",
+					"policy_version": "2026.09",
+				},
+			]
+		),
+	)
+
+	result = run_pipeline(paths)
+	standardized = pd.read_parquet(paths.standardized_path)
+	curated = pd.read_parquet(paths.curated_path)
+	rejected = pd.read_csv(paths.rejected_path)
+
+	assert result.rows_read == 3
+	assert result.rows_accepted == 2
+	assert result.rows_rejected == 1
+	assert reconcile_row_counts(
+		result.rows_read,
+		result.rows_accepted,
+		result.rows_rejected,
+		result.rows_written,
+	).passed
+	assert set(standardized["category_code"]) == {"CAT-001", "CAT-003"}
+	assert set(curated["department"]) == {"Identity and Access", "Billing Operations"}
+	assert set(curated["policy_version"]) == {"2026.09"}
+	assert rejected.iloc[0]["rejection_reason"] == INVALID_REFERENCE_CATEGORY

@@ -1,21 +1,21 @@
-id,case_number,title,description,status,priority,created_at,updated_at
-1,CASE-2001,Unable to reset password,Customer does not receive the password reset email after several attempts.,open,medium,2026-09-01 09:15:00,2026-09-01 09:15:00
-2,CASE-2002,Payment failed at checkout,Customer receives a payment declined message despite having a valid card.,in_progress,high,2026-09-01 10:20:00,2026-09-02 08:30:00
-3,CASE-2003,Account access locked,Customer is locked out after too many sign-in attempts and cannot access the account.,open,high,2026-09-01 11:05:00,2026-09-01 11:05:00
-4,CASE-2004,Regional service outage,Customer cannot access the support portal during a regional service interruption.,in_progress,critical,2026-09-01 13:40:00,2026-09-01 14:10:00
-5,CASE-2005,Password reset link expired,The password reset link expires immediately after the customer opens it.,resolved,low,2026-09-02 08:00:00,2026-09-03 16:25:00
-6,CASE-2006,Duplicate payment charge,Customer was charged twice for the same monthly subscription renewal.,open,high,2026-09-02 09:45:00,2026-09-02 09:45:00
-7,CASE-2007,Unable to update account email,Customer receives an error when saving a new email address on the account.,closed,medium,2026-09-02 12:10:00,2026-09-04 10:00:00
-8,CASE-2008,Mobile account access issue,Customer can sign in on the website but receives an error in the mobile application.,in_progress,medium,2026-09-02 14:30:00,2026-09-03 09:20:00
-9,CASE-2009,Service outage notification delay,Customer did not receive an outage notification during a regional interruption.,resolved,low,2026-09-03 07:50:00,2026-09-04 12:45:00
-10,CASE-2010,Critical account access failure,Customer cannot access the account and the recovery process also fails.,open,critical,2026-09-03 09:10:00,2026-09-03 09:10:00
-11,CASE-2011,Invoice download unavailable,Customer cannot download the latest invoice from the billing page.,open,medium,2026-09-03 11:35:00,2026-09-03 11:35:00
-12,CASE-2012,Subscription cancellation error,Customer receives an error while trying to cancel a subscription.,in_progress,high,2026-09-03 15:05:00,2026-09-05 08:15:00
-13,CASE-2013,Missing account verification email,,open,low,2026-09-04 08:25:00,2026-09-04 08:25:00
-14,CASE-2014,Unexpected login alert,Customer received a login alert for a device they do not recognize.,resolved,high,2026-09-04 10:40:00,2026-09-05 13:30:00
-15,CASE-2015,Slow support portal response,Pages in the support portal take more than thirty seconds to load.,closed,medium,2026-09-04 13:15:00,2026-09-06 09:00:00
-16,CASE-2005,Follow-up on password reset,Customer contacted support again because the password reset issue returned.,open,high,2026-09-05 09:50:00,2026-09-05 09:50:00
-17,CASE-2017,Refund not received,Customer has not received an expected refund after the stated processing period.,in_progress,high,2026-09-05 11:20:00,2026-09-06 14:10:00
-18,CASE-2018,Profile preferences not saving,Customer changes notification preferences but the updates are not retained.,resolved,low,2026-09-05 14:45:00,2026-09-07 10:35:00
-19,CASE-2019,Data export request pending,Customer requested an account data export that has not completed.,pending,medium,2026-09-06 08:05:00,2026-09-06 08:05:00
-20,CASE-2020,Service outage caused lost session,Customer was signed out during an outage and lost an unsaved support form.,open,urgent,2026-09-06 16:30:00,2026-09-06 16:30:00
+id,case_number,title,description,status,priority,created_at,updated_at,category_code
+1,CASE-2001,Unable to reset password,Customer does not receive the password reset email after several attempts.,open,medium,2026-09-01 09:15:00,2026-09-01 09:15:00,CAT-002
+2,CASE-2002,Payment failed at checkout,Customer receives a payment declined message despite having a valid card.,in_progress,high,2026-09-01 10:20:00,2026-09-02 08:30:00,CAT-003
+3,CASE-2003,Account access locked,Customer is locked out after too many sign-in attempts and cannot access the account.,open,high,2026-09-01 11:05:00,2026-09-01 11:05:00,CAT-001
+4,CASE-2004,Regional service outage,Customer cannot access the support portal during a regional service interruption.,in_progress,critical,2026-09-01 13:40:00,2026-09-01 14:10:00,CAT-005
+5,CASE-2005,Password reset link expired,The password reset link expires immediately after the customer opens it.,resolved,low,2026-09-02 08:00:00,2026-09-03 16:25:00,CAT-002
+6,CASE-2006,Duplicate payment charge,Customer was charged twice for the same monthly subscription renewal.,open,high,2026-09-02 09:45:00,2026-09-02 09:45:00,CAT-003
+7,CASE-2007,Unable to update account email,Customer receives an error when saving a new email address on the account.,closed,medium,2026-09-02 12:10:00,2026-09-04 10:00:00,CAT-001
+8,CASE-2008,Mobile account access issue,Customer can sign in on the website but receives an error in the mobile application.,in_progress,medium,2026-09-02 14:30:00,2026-09-03 09:20:00,CAT-006
+9,CASE-2009,Service outage notification delay,Customer did not receive an outage notification during a regional interruption.,resolved,low,2026-09-03 07:50:00,2026-09-04 12:45:00,CAT-005
+10,CASE-2010,Critical account access failure,Customer cannot access the account and the recovery process also fails.,open,critical,2026-09-03 09:10:00,2026-09-03 09:10:00,CAT-001
+11,CASE-2011,Invoice download unavailable,Customer cannot download the latest invoice from the billing page.,open,medium,2026-09-03 11:35:00,2026-09-03 11:35:00,CAT-003
+12,CASE-2012,Subscription cancellation error,Customer receives an error while trying to cancel a subscription.,in_progress,high,2026-09-03 15:05:00,2026-09-05 08:15:00,CAT-004
+13,CASE-2013,Missing account verification email,,open,low,2026-09-04 08:25:00,2026-09-04 08:25:00,CAT-002
+14,CASE-2014,Unexpected login alert,Customer received a login alert for a device they do not recognize.,resolved,high,2026-09-04 10:40:00,2026-09-05 13:30:00,CAT-002
+15,CASE-2015,Slow support portal response,Pages in the support portal take more than thirty seconds to load.,closed,medium,2026-09-04 13:15:00,2026-09-06 09:00:00,CAT-005
+16,CASE-2005,Follow-up on password reset,Customer contacted support again because the password reset issue returned.,open,high,2026-09-05 09:50:00,2026-09-05 09:50:00,CAT-002
+17,CASE-2017,Refund not received,Customer has not received an expected refund after the stated processing period.,in_progress,high,2026-09-05 11:20:00,2026-09-06 14:10:00,CAT-003
+18,CASE-2018,Profile preferences not saving,Customer changes notification preferences but the updates are not retained.,resolved,low,2026-09-05 14:45:00,2026-09-07 10:35:00,CAT-001
+19,CASE-2019,Data export request pending,Customer requested an account data export that has not completed.,pending,medium,2026-09-06 08:05:00,2026-09-06 08:05:00,CAT-999
+20,CASE-2020,Service outage caused lost session,Customer was signed out during an outage and lost an unsaved support form.,open,urgent,2026-09-06 16:30:00,2026-09-06 16:30:00,CAT-888

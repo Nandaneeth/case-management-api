@@ -7,6 +7,9 @@ import pandas as pd
 from etl.config.case_schema import CASE_SCHEMA
 
 
+INVALID_REFERENCE_CATEGORY = "INVALID_REFERENCE_CATEGORY"
+
+
 def split_valid_and_rejected_records(
 	dataframe: pd.DataFrame,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -41,6 +44,26 @@ def split_valid_and_rejected_records(
 	valid_records = dataframe.loc[~rejected_mask].copy()
 	rejected_records = dataframe.loc[rejected_mask].copy()
 	rejected_records["rejection_reason"] = reasons.loc[rejected_mask]
+	return valid_records, rejected_records
+
+
+def split_valid_and_invalid_reference_categories(
+	dataframe: pd.DataFrame,
+	reference_dataframe: pd.DataFrame,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+	"""Reject case rows whose category code is absent from reference data."""
+
+	if "category_code" not in dataframe.columns:
+		raise ValueError("Missing required referential-integrity column: category_code")
+	if "category_code" not in reference_dataframe.columns:
+		raise ValueError("Reference data is missing required column: category_code")
+
+	known_categories = set(reference_dataframe["category_code"].dropna())
+	valid_mask = dataframe["category_code"].isin(known_categories)
+	valid_records = dataframe.loc[valid_mask].copy()
+	rejected_records = dataframe.loc[~valid_mask].copy()
+	if not rejected_records.empty:
+		rejected_records["rejection_reason"] = INVALID_REFERENCE_CATEGORY
 	return valid_records, rejected_records
 
 

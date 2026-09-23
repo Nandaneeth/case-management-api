@@ -8,6 +8,7 @@ from typing import Any
 import pandas as pd
 from pandas.api.types import (
 	is_datetime64_any_dtype,
+	is_bool_dtype,
 	is_integer_dtype,
 	is_object_dtype,
 	is_string_dtype,
@@ -208,5 +209,12 @@ def _is_type_compatible(series: pd.Series, expected_type: str) -> bool:
 		return is_datetime64_any_dtype(series) or (
 			not non_null.empty
 			and pd.to_datetime(non_null, errors="coerce").notna().all()
+		)
+	if expected_type == "boolean":
+		return is_bool_dtype(series) or (
+			not non_null.empty
+			and non_null.astype("string").str.lower().isin(
+				{"true", "false", "1", "0"}
+			).all()
 		)
 	return False
