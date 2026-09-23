@@ -1,0 +1,6 @@
+id,case_number,title,description,status,priority,created_at,updated_at,rejection_reason
+5,CASE-2005,Password reset link expired,The password reset link expires immediately after the customer opens it.,resolved,low,2026-09-02 08:00:00,2026-09-03 16:25:00,duplicate case_number
+16,CASE-2005,Follow-up on password reset,Customer contacted support again because the password reset issue returned.,open,high,2026-09-05 09:50:00,2026-09-05 09:50:00,duplicate case_number
+19,CASE-2019,Data export request pending,Customer requested an account data export that has not completed.,pending,medium,2026-09-06 08:05:00,2026-09-06 08:05:00,invalid status
+20,CASE-2020,Service outage caused lost session,Customer was signed out during an outage and lost an unsaved support form.,open,urgent,2026-09-06 16:30:00,2026-09-06 16:30:00,invalid priority
+13,CASE-2013,Missing account verification email,,open,low,2026-09-04 08:25:00,2026-09-04 08:25:00,missing description

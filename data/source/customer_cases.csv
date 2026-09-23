@@ -1,0 +1,11 @@
+case_number,title,description,status,priority
+CASE-1001,Unable to reset password,Customer does not receive the password reset email after three attempts.,open,medium
+CASE-1002,Payment failed at checkout,Customer receives a payment declined message even though the card is valid.,in_progress,high
+CASE-1003,Account access locked,Customer is locked out after too many sign-in attempts and cannot access the account.,open,high
+CASE-1004,Service outage in billing portal,Customer cannot load the billing portal and receives a service unavailable message.,in_progress,critical
+CASE-1005,Password reset link expired,Customer reports that the password reset link expires immediately after it is opened.,resolved,low
+CASE-1006,Duplicate payment charge,Customer was charged twice for the same subscription renewal.,open,high
+CASE-1007,Unable to update account email,Customer receives an error when saving a new account email address.,closed,medium
+CASE-1008,Mobile account access issue,Customer can sign in on the website but receives an error in the mobile application.,in_progress,medium
+CASE-1009,Service outage notification delay,Customer did not receive an outage notification during a regional interruption.,resolved,low
+CASE-1010,Critical account access failure,Customer cannot access the account and the recovery process also fails.,open,critical
