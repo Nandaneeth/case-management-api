@@ -118,6 +118,16 @@ Interactive API documentation:
 
 There is currently no delete endpoint.
 
+## Start the ETL Mock Policy API
+
+The Week 2 ETL source test API is separate from the Customer Support Case Management API. From the repository root, start it on port 8001:
+
+```powershell
+python -m uvicorn mock_api.policy_api:app --reload --port 8001
+```
+
+Fetch the mock policy updates from `http://127.0.0.1:8001/api/policy-updates`. The response is a small JSON array containing `policy_id`, `category_code`, and `policy_version` fields for joining with the local policy and reference datasets. Interactive API documentation is available at `http://127.0.0.1:8001/docs`.
+
 ### Example Request
 
 With the server running, create a case from PowerShell:
@@ -254,3 +264,158 @@ python -m pytest
 ```
 
 Use focused branch names such as `feature/database-model`, `feature/case-endpoints`, or `feature/error-handling`.
+
+## Week 2 – ETL and Data Engineering Foundation
+
+The ETL package is separate from the FastAPI customer-support case-management API. It provides a reusable data-engineering foundation for ingesting, profiling, validating, transforming, and publishing customer-support case data.
+
+### 1. ETL Architecture
+
+The intended Week 2 flow is:
+
+```text
+Source -> Raw/Bronze -> Profiling & Schema Validation -> Standardized/Silver -> Data Quality -> Curated/Gold -> Audit & Reconciliation
+```
+
+The current executable local pipeline follows the Pandas path from raw sources through standardized, rejected, and curated outputs. The package also contains separate metadata-driven Spark extraction and Bronze-writing components; those components are tested independently and are not currently wired into `etl.pipeline`.
+
+### 2. Source Ingestion
+
+The ETL package provides readers for:
+
+- CSV files
+- JSON files
+- Parquet files
+- Relational database tables through SQLAlchemy
+- REST APIs returning JSON arrays
+
+The Pandas readers implement the common `SourceReader` abstraction where applicable. `etl.config.source_registry` selects a reader by source type. The executable pipeline currently reads the case, reference, and policy CSV files plus the policy-updates REST API.
+
+### 3. Data Profiling
+
+The profiling module reports:
+
+- row and column counts
+- null counts and completeness percentages
+- distinct and duplicate counts
+- value counts for string-like columns
+- basic case validity checks for required columns, statuses, priorities, and case-number uniqueness
+
+The implementation does not currently calculate general numeric descriptive statistics such as mean, median, or standard deviation. The local pipeline profiles the records selected for processing before schema and quality validation.
+
+### 4. Schema Validation
+
+Schemas are declared as `ColumnSpec` contracts in `etl/config/case_schema.py`. Validation supports:
+
+- expected column names
+- compatible data types
+- required-value checks
+- allowed-value checks for statuses and priorities
+- missing-column detection
+
+The separate `compare_schema` utility reports added, removed, and type-changed columns for schema-evolution checks. The current pipeline uses `validate_schema` and fails fast for missing required columns and incompatible data types; it does not reject extra columns as a pipeline error.
+
+### 5. Data Quality and Rejected Records
+
+The pipeline separates valid and invalid case records and writes rejected records with a `rejection_reason` column to `data/rejected/cases_rejected.csv`.
+
+Implemented rejection checks include:
+
+- missing or blank case numbers
+- duplicate case numbers
+- invalid statuses
+- invalid priorities
+- null values in required fields
+- case records whose category is absent from reference data
+
+### 6. Transformations
+
+The Pandas ETL code implements:
+
+- filtering through checkpoint selection, quality rules, and reference validation
+- joins between cases, reference data, policy metadata, and policy updates
+- status aggregation through `aggregate_cases_by_status`
+- deduplication of standardized records by case number and update timestamp during output merging
+- string trimming, status and priority normalization, and configured null handling
+- reusable filtering, priority enrichment, and ranking helpers in `dataframe_operations.py`
+
+The default enriched pipeline publishes selected curated columns rather than a status aggregation. The package also includes the verified PySpark transformation `summarize_standardized_cases`, which filters unusable records, keeps the latest record per case with a window function, and aggregates by status and priority. It is currently a separate transformation and is not called by `etl.pipeline`.
+
+### 7. Layered Data Outputs
+
+- `data/raw/` contains source CSV inputs such as cases, reference data, and policy metadata.
+- `data/standardized/` contains the normalized and joined case dataset in Parquet format.
+- `data/curated/` contains the consumer-oriented curated case output in Parquet format.
+- `data/rejected/` contains invalid records and their rejection reasons in CSV format.
+- `data/audit/` contains the incremental checkpoint written by the current pipeline.
+
+The repository also contains `data/bronze/`, `data/silver/`, and `data/gold/` directories for the broader layered design. The current `etl.pipeline` entrypoint does not populate those directories.
+
+### 8. Incremental and Idempotent Processing
+
+`CheckpointStore` reads `data/audit/cases_checkpoint.json` and processes only records whose `updated_at` value is newer than `last_processed_timestamp`. After a successful run, it stores the newest processed timestamp.
+
+Standardized output is merged with existing Parquet data and deduplicated using `case_number` plus `updated_at`. A second run with no newer records returns `completed_no_new_records`, supporting repeatable incremental execution.
+
+### 9. Audit and Reconciliation
+
+The package defines an `AuditRecord` model with fields for run ID, pipeline name, source, start and end times, row counts, status, and error information. `AuditLogger` can write these records as JSON Lines, but the current `etl.pipeline` entrypoint does not invoke it. Therefore, those structured audit fields are available in the package but are not currently captured in an `audit.jsonl` run log.
+
+The current pipeline provides a JSON summary on standard output containing rows read, accepted, rejected, written, and pipeline status. It also writes the incremental checkpoint under `data/audit/`.
+
+Reconciliation checks that source rows equal accepted plus rejected rows, and that accepted rows equal standardized rows. A failed reconciliation raises an error before outputs are written.
+
+### 10. PySpark Environment
+
+PySpark `4.2.0` is included in `requirements.txt` and has been verified locally with Java 17. The smoke test successfully:
+
+- created a `SparkSession`
+- reported Spark version `4.2.0`
+- processed a simple Spark DataFrame containing five rows
+
+On Windows, local Spark execution may display Hadoop or `winutils` warnings. Those warnings do not prevent the local smoke test from completing successfully when the Java environment is configured correctly.
+
+### 11. Docker
+
+The repository includes a Dockerfile based on Python 3.11, installs the project dependencies plus PyArrow, copies the application and ETL code, exposes `/app/data` as a volume, and starts the module with:
+
+```text
+python -m etl.pipeline
+```
+
+The image builds successfully. The default enriched pipeline also requires the mock policy API at port 8001; its current URL is hard-coded to `127.0.0.1`, so a complete container run requires the API to be colocated in the container network namespace or the URL configuration to be changed. The Dockerfile should not be treated as a standalone complete ETL deployment until that dependency is configured.
+
+### 12. Testing
+
+The ETL components have pytest coverage for:
+
+- CSV, database, metadata, and source-reader behavior
+- profiling and schema validation
+- quality-rule rejection behavior
+- Pandas pipeline idempotency and source joins
+- reconciliation
+- Bronze writing
+- PySpark transformations, including filtering, latest-record windowing, aggregation, and required-column validation
+
+Run the full test suite from the project root with:
+
+```powershell
+python -m pytest
+```
+
+### 13. Week 2 Progress
+
+- [x] Common source-reader abstraction
+- [x] CSV, JSON, Parquet, relational database, and REST API readers
+- [x] Pandas profiling
+- [x] Schema and type validation
+- [x] Data-quality rules and rejected-record output
+- [x] Pandas standardization, joins, null handling, and incremental output merging
+- [x] Row-count reconciliation
+- [x] Incremental checkpointing and idempotent reruns
+- [x] PySpark transformation capability and local Spark smoke test
+- [x] Pytest coverage for ETL components
+- [x] Dockerfile and container build preparation
+- [ ] Wire the structured `AuditLogger` into the executable pipeline
+- [ ] Connect the metadata-driven Spark extraction and Bronze/Silver/Gold flow to the main pipeline
+- [ ] Make the policy API URL configurable for standalone container execution
