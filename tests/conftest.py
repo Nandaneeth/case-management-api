@@ -10,11 +10,14 @@ from sqlalchemy.pool import StaticPool
 
 from app.db.database import Base, get_db
 from app.main import app
+from app.services.assistant_service import EmptyRetriever
 
 
 @pytest.fixture()
-def client() -> Generator[TestClient, None, None]:
+def client(monkeypatch: pytest.MonkeyPatch) -> Generator[TestClient, None, None]:
     """Provide a TestClient backed by a fresh in-memory database."""
+
+    monkeypatch.setattr("app.main.build_policy_retriever", lambda: EmptyRetriever())
 
     engine = create_engine(
         "sqlite:///:memory:",

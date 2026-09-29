@@ -1,0 +1,2037 @@
+{
+  "dataset_id": "customer-support-policy-rag-v1",
+  "dataset_path": "C:\\Users\\Nandaneeth\\OneDrive\\Documents\\projects\\case-management-api\\data\\evaluation\\rag_evaluation_dataset.json",
+  "policy_root": "C:\\Users\\Nandaneeth\\OneDrive\\Documents\\projects\\case-management-api\\data\\policies",
+  "chunk_count": 44,
+  "configurations": [
+    {
+      "name": "vector",
+      "top_k": 5,
+      "reranking_enabled": false,
+      "results": [
+        {
+          "question_id": "factual-001",
+          "query": "How many independent identity factors must support verify before resetting a password?",
+          "configuration": "vector",
+          "answer": "must be time-limited, logged, and reviewed within the next support cycle. Any unapproved exception is treated as a policy breach.\n\n## Escalation guidance\n\nEscalate to the IAM team when:\n- a customer asks for access to another person\u2019s account without documented authorization;\n- there are signs of credential theft, password spraying, suspicious login automation, or account takeover;\n- the account has multiple failed identity checks across different channels;\n- a support agent cannot confirm the r to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th validated support case and documented manual review.\n\nAny exception must be documented in writing, time-stamped, and approved before the reset is completed. Unsupported deviations are considered policy violations.\n\n## Escalation guidance\n\nEscalate to the IAM or Security Operations team when:\n- the customer cannot satisfy identity verification requirements;\n- the account shows signs of compromise, phishing, or unauthorized access;\n- multiple reset attempts are made from different devices or geogr # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving Sources: POL-ACC-002, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "2b1cbce0-3321-57fa-87c2-7429d78cf646",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+            "0b7ad189-4b4d-5aca-9245-0657152c6448",
+            "f3247dfb-8721-596c-a37b-589408faf6f0"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "2b1cbce0-3321-57fa-87c2-7429d78cf646",
+              "policy_id": "POL-ACC-002",
+              "text": "must be time-limited, logged, and reviewed within the next support cycle. Any unapproved exception is treated as a policy breach.\n\n## Escalation guidance\n\nEscalate to the IAM team when:\n- a customer asks for access to another person\u2019s account without documented authorization;\n- there are signs of credential theft, password spraying, suspicious login automation, or account takeover;\n- the account has multiple failed identity checks across different channels;\n- a support agent cannot confirm the r",
+              "score": 0.365148
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.353032
+            },
+            {
+              "chunk_id": "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+              "policy_id": "POL-ACC-001",
+              "text": " to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th",
+              "score": 0.231592
+            },
+            {
+              "chunk_id": "0b7ad189-4b4d-5aca-9245-0657152c6448",
+              "policy_id": "POL-ACC-001",
+              "text": "validated support case and documented manual review.\n\nAny exception must be documented in writing, time-stamped, and approved before the reset is completed. Unsupported deviations are considered policy violations.\n\n## Escalation guidance\n\nEscalate to the IAM or Security Operations team when:\n- the customer cannot satisfy identity verification requirements;\n- the account shows signs of compromise, phishing, or unauthorized access;\n- multiple reset attempts are made from different devices or geogr",
+              "score": 0.202073
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.188434
+            }
+          ],
+          "citations": [
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Verify the customer\u2019s identity using at least two independent factors"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 0.9644,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.6,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.6,
+            "groundedness": 0.9878,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "factual-002",
+          "query": "What should the customer-facing status page represent during a service outage?",
+          "configuration": "vector",
+          "answer": "d incidents, update customers on the current status at scheduled intervals and escalate to engineering leadership if the timeline or risk impact changes materially.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer is in a region or environment not covered by the normal outage monitoring tools;\n- the outage is caused by a third-party provider and the service owner is awaiting vendor confirmation;\n- a temporary workaround requires manual intervention outside normal service operations # Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within Sources: POL-OPS-009, POL-ACC-001, POL-CUST-027, POL-ACC-002.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "04a9356d-377c-5123-b3d2-a3961e74218e",
+            "301a578f-5c28-5a88-a86d-01ef071651d8",
+            "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+            "b3306896-b1e2-51ae-9298-6060c0925e6a",
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070"
+          ],
+          "retrieved_policy_ids": [
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-ACC-002"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "04a9356d-377c-5123-b3d2-a3961e74218e",
+              "policy_id": "POL-OPS-009",
+              "text": "d incidents, update customers on the current status at scheduled intervals and escalate to engineering leadership if the timeline or risk impact changes materially.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer is in a region or environment not covered by the normal outage monitoring tools;\n- the outage is caused by a third-party provider and the service owner is awaiting vendor confirmation;\n- a temporary workaround requires manual intervention outside normal service operations ",
+              "score": 0.336718
+            },
+            {
+              "chunk_id": "301a578f-5c28-5a88-a86d-01ef071651d8",
+              "policy_id": "POL-OPS-009",
+              "text": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio",
+              "score": 0.319438
+            },
+            {
+              "chunk_id": "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+              "policy_id": "POL-ACC-001",
+              "text": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie",
+              "score": 0.300871
+            },
+            {
+              "chunk_id": "b3306896-b1e2-51ae-9298-6060c0925e6a",
+              "policy_id": "POL-CUST-027",
+              "text": "next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g",
+              "score": 0.270449
+            },
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.245256
+            }
+          ],
+          "citations": [
+            "POL-OPS-009",
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-ACC-002"
+          ],
+          "expected_evidence": [
+            "Retain a single source of truth for the incident status",
+            "update the customer-facing status page or support queues"
+          ],
+          "expected_policy_id": "POL-OPS-009",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 1.5395,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.4,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.5,
+            "groundedness": 0.967,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "factual-003",
+          "query": "Who may approve a documented goodwill refund adjustment?",
+          "configuration": "vector",
+          "answer": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g # Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran Sources: POL-ACC-001, POL-ACC-002, POL-BILL-014, POL-CUST-027.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+            "de704ec8-fa97-5489-8afb-fb6357cd4279",
+            "b3306896-b1e2-51ae-9298-6060c0925e6a",
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-BILL-014",
+            "POL-CUST-027",
+            "POL-CUST-027"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+              "policy_id": "POL-ACC-001",
+              "text": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie",
+              "score": 0.316619
+            },
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.28677
+            },
+            {
+              "chunk_id": "de704ec8-fa97-5489-8afb-fb6357cd4279",
+              "policy_id": "POL-BILL-014",
+              "text": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t",
+              "score": 0.246183
+            },
+            {
+              "chunk_id": "b3306896-b1e2-51ae-9298-6060c0925e6a",
+              "policy_id": "POL-CUST-027",
+              "text": "next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g",
+              "score": 0.221359
+            },
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.199431
+            }
+          ],
+          "citations": [
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-BILL-014",
+            "POL-CUST-027"
+          ],
+          "expected_evidence": [
+            "a documented goodwill adjustment is approved by the Customer Resolution Manager"
+          ],
+          "expected_policy_id": "POL-CUST-027",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 0.8734,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.4,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.4286,
+            "groundedness": 0.9667,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "procedure-001",
+          "query": "What procedure should an agent follow when handling a password reset request?",
+          "configuration": "vector",
+          "answer": "to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving Sources: POL-ACC-001, POL-ACC-002.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+            "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "7890f4df-fa5d-5275-802d-1cf1da21b145"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-002",
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-ACC-001",
+            "POL-ACC-002"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.260133
+            },
+            {
+              "chunk_id": "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+              "policy_id": "POL-ACC-001",
+              "text": " to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th",
+              "score": 0.253396
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.251418
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.249222
+            },
+            {
+              "chunk_id": "7890f4df-fa5d-5275-802d-1cf1da21b145",
+              "policy_id": "POL-ACC-002",
+              "text": "nd approving contact.\n6. For any access change to billing, service configuration, or personal data, confirm the customer\u2019s intent and log the action in the case record.\n7. If access is granted temporarily, set a validity window and notify the customer of the expiration terms.\n8. When an account is compromised or a suspicious access event is observed, disable or limit access immediately and start an account security review.\n\n## Exceptions\n\nExceptions may be permitted when:\n- a legal representativ",
+              "score": 0.225075
+            }
+          ],
+          "citations": [
+            "POL-ACC-001",
+            "POL-ACC-002"
+          ],
+          "expected_evidence": [
+            "confirm the channel of contact and the account identifier",
+            "verify the customer\u2019s identity using at least two independent factors",
+            "complete the reset via the approved identity workflow",
+            "record the case ID, verification factors used, date and time of the reset"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "procedure",
+          "filters": {},
+          "latency_ms": 0.8371,
+          "metrics": {
+            "evidence_hit_rate": 0.25,
+            "evidence_matches": [
+              "complete the reset via the approved identity workflow"
+            ],
+            "retrieval_relevance": 0.4,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.75,
+            "groundedness": 0.9825,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 4
+          }
+        },
+        {
+          "question_id": "procedure-002",
+          "query": "What steps should support take after a customer reports a failed payment?",
+          "configuration": "vector",
+          "answer": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu Sources: POL-BILL-014, POL-CUST-027, POL-ACC-002.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "de704ec8-fa97-5489-8afb-fb6357cd4279",
+            "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+            "b3306896-b1e2-51ae-9298-6060c0925e6a",
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+            "80503e04-9f1e-577a-b83d-b17ba11a88e8"
+          ],
+          "retrieved_policy_ids": [
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-CUST-027",
+            "POL-ACC-002",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "de704ec8-fa97-5489-8afb-fb6357cd4279",
+              "policy_id": "POL-BILL-014",
+              "text": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t",
+              "score": 0.348932
+            },
+            {
+              "chunk_id": "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+              "policy_id": "POL-BILL-014",
+              "text": "s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win",
+              "score": 0.340195
+            },
+            {
+              "chunk_id": "b3306896-b1e2-51ae-9298-6060c0925e6a",
+              "policy_id": "POL-CUST-027",
+              "text": "next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g",
+              "score": 0.334664
+            },
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.325166
+            },
+            {
+              "chunk_id": "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+              "policy_id": "POL-BILL-014",
+              "text": "and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu",
+              "score": 0.285546
+            }
+          ],
+          "citations": [
+            "POL-BILL-014",
+            "POL-CUST-027",
+            "POL-ACC-002"
+          ],
+          "expected_evidence": [
+            "Confirm the failed transaction details",
+            "Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error",
+            "guide the customer through updating the billing details with a secure verification step",
+            "Record the root cause, customer communication, action taken, and any follow-up date"
+          ],
+          "expected_policy_id": "POL-BILL-014",
+          "expected_supported": true,
+          "category": "procedure",
+          "filters": {},
+          "latency_ms": 1.5262,
+          "metrics": {
+            "evidence_hit_rate": 0.5,
+            "evidence_matches": [
+              "Confirm the failed transaction details",
+              "Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error"
+            ],
+            "retrieval_relevance": 0.6,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.7778,
+            "groundedness": 0.9605,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 4
+          }
+        },
+        {
+          "question_id": "filter-001",
+          "query": "What verification rule applies to password recovery?",
+          "configuration": "vector",
+          "answer": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin attempts are made from different devices or geographies;\n- the customer requests access to an account they do not control or claims to be acting on behalf of another person without proper authorization.\n\nEscalate to the Support Team Lead when a reset cannot be completed because of system issues, incomplete account data, or a support workflow conflict. All escalations must include the account identifiers, verification steps attempted, and the exact reason the policy could not be applied without # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving he customer that the reset is complete, provide the required next steps, and remind them to enable MFA or device recovery options if available.\n7. Record the case ID, verification factors used, date and time of the reset, agent name, and any follow-up recommendation in the case management system.\n8. Where the account is a high-risk customer record or tied to a regulated service, notify the security or compliance contact per the escalation guidance below.\n\n## Exceptions\n\nExceptions to standard ve Sources: POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "230d4571-4539-5f22-82d2-38d75bfdb833",
+            "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e",
+            "5fd67961-6dc7-5c53-9a1d-e7678a8922f2",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "35cf068e-b869-51e1-9c3f-f7aa33db8316"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "230d4571-4539-5f22-82d2-38d75bfdb833",
+              "policy_id": "POL-ACC-001",
+              "text": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom",
+              "score": 0.35465
+            },
+            {
+              "chunk_id": "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e",
+              "policy_id": "POL-ACC-001",
+              "text": "e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin",
+              "score": 0.199431
+            },
+            {
+              "chunk_id": "5fd67961-6dc7-5c53-9a1d-e7678a8922f2",
+              "policy_id": "POL-ACC-001",
+              "text": " attempts are made from different devices or geographies;\n- the customer requests access to an account they do not control or claims to be acting on behalf of another person without proper authorization.\n\nEscalate to the Support Team Lead when a reset cannot be completed because of system issues, incomplete account data, or a support workflow conflict. All escalations must include the account identifiers, verification steps attempted, and the exact reason the policy could not be applied without ",
+              "score": 0.185784
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.176227
+            },
+            {
+              "chunk_id": "35cf068e-b869-51e1-9c3f-f7aa33db8316",
+              "policy_id": "POL-ACC-001",
+              "text": "he customer that the reset is complete, provide the required next steps, and remind them to enable MFA or device recovery options if available.\n7. Record the case ID, verification factors used, date and time of the reset, agent name, and any follow-up recommendation in the case management system.\n8. Where the account is a high-risk customer record or tied to a regulated service, notify the security or compliance contact per the escalation guidance below.\n\n## Exceptions\n\nExceptions to standard ve",
+              "score": 0.169978
+            }
+          ],
+          "citations": [
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Verify the customer\u2019s identity using at least two independent factors"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "metadata_filter",
+          "filters": {
+            "category": "Authentication and Access",
+            "status": "Approved"
+          },
+          "latency_ms": 1.1863,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.8,
+            "groundedness": 0.9943,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "filter-002",
+          "query": "What exception rule applies to customer refunds?",
+          "configuration": "vector",
+          "answer": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o ued via the standard channel;\n- multiple charges or duplicate invoice errors appear related to the same order;\n- a charge dispute involves legal, compliance, or financial review concerns.\n\nEscalate to the Customer Resolution Manager when the customer disputes a denial, alleges unfair treatment, or requests a policy exception not clearly covered by the standard criteria. Include the case ID, service details, refund rationale, prior customer communications, and any supporting evidence so the appro and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den Sources: POL-CUST-027.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+            "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f",
+            "fc6ab35b-66ee-5bfd-9b49-405ec5e202d4",
+            "36652783-7486-5302-996a-3244ba309535",
+            "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d"
+          ],
+          "retrieved_policy_ids": [
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.33503
+            },
+            {
+              "chunk_id": "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f",
+              "policy_id": "POL-CUST-027",
+              "text": "lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o",
+              "score": 0.234772
+            },
+            {
+              "chunk_id": "fc6ab35b-66ee-5bfd-9b49-405ec5e202d4",
+              "policy_id": "POL-CUST-027",
+              "text": "ued via the standard channel;\n- multiple charges or duplicate invoice errors appear related to the same order;\n- a charge dispute involves legal, compliance, or financial review concerns.\n\nEscalate to the Customer Resolution Manager when the customer disputes a denial, alleges unfair treatment, or requests a policy exception not clearly covered by the standard criteria. Include the case ID, service details, refund rationale, prior customer communications, and any supporting evidence so the appro",
+              "score": 0.233854
+            },
+            {
+              "chunk_id": "36652783-7486-5302-996a-3244ba309535",
+              "policy_id": "POL-CUST-027",
+              "text": " and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept",
+              "score": 0.224751
+            },
+            {
+              "chunk_id": "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+              "policy_id": "POL-CUST-027",
+              "text": "ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den",
+              "score": 0.214346
+            }
+          ],
+          "citations": [
+            "POL-CUST-027"
+          ],
+          "expected_evidence": [
+            "Exceptions to standard eligibility rules may be approved only in these circumstances",
+            "All exceptions must be approved, reason-coded, and logged in the refund ledger"
+          ],
+          "expected_policy_id": "POL-CUST-027",
+          "expected_supported": true,
+          "category": "metadata_filter",
+          "filters": {
+            "category": "Customer Resolution and Billing",
+            "policy_id": "POL-CUST-027"
+          },
+          "latency_ms": 1.6959,
+          "metrics": {
+            "evidence_hit_rate": 0.5,
+            "evidence_matches": [
+              "All exceptions must be approved, reason-coded, and logged in the refund ledger"
+            ],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.4,
+            "groundedness": 0.9942,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "specific-001",
+          "query": "Under policy POL-BILL-014, what should happen when a retryable payment failure is caused by a temporary gateway issue?",
+          "configuration": "vector",
+          "answer": "s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t # Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next to confirm whether the customer is in a retry window, a grace period, or a service suspension state.\n4. Ask the customer whether they are using a newly issued card, a card that recently expired, or a bank account with changed limits or verification requirements.\n5. If the payment method is still valid, guide the customer through updating the billing details with a secure verification step. If necessary, document the exact date and time that the new method was entered and confirm the transaction and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu Sources: POL-BILL-014.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+            "de704ec8-fa97-5489-8afb-fb6357cd4279",
+            "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+            "5e1ae976-6216-5d63-80fe-3a30840fb522",
+            "80503e04-9f1e-577a-b83d-b17ba11a88e8"
+          ],
+          "retrieved_policy_ids": [
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+              "policy_id": "POL-BILL-014",
+              "text": "s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win",
+              "score": 0.34721
+            },
+            {
+              "chunk_id": "de704ec8-fa97-5489-8afb-fb6357cd4279",
+              "policy_id": "POL-BILL-014",
+              "text": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t",
+              "score": 0.303895
+            },
+            {
+              "chunk_id": "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+              "policy_id": "POL-BILL-014",
+              "text": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next",
+              "score": 0.24891
+            },
+            {
+              "chunk_id": "5e1ae976-6216-5d63-80fe-3a30840fb522",
+              "policy_id": "POL-BILL-014",
+              "text": " to confirm whether the customer is in a retry window, a grace period, or a service suspension state.\n4. Ask the customer whether they are using a newly issued card, a card that recently expired, or a bank account with changed limits or verification requirements.\n5. If the payment method is still valid, guide the customer through updating the billing details with a secure verification step. If necessary, document the exact date and time that the new method was entered and confirm the transaction",
+              "score": 0.247865
+            },
+            {
+              "chunk_id": "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+              "policy_id": "POL-BILL-014",
+              "text": "and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu",
+              "score": 0.169562
+            }
+          ],
+          "citations": [
+            "POL-BILL-014"
+          ],
+          "expected_evidence": [
+            "advise the customer to retry the payment once after the stated waiting period",
+            "case notes reflect the reason for the retry"
+          ],
+          "expected_policy_id": "POL-BILL-014",
+          "expected_supported": true,
+          "category": "specific_policy",
+          "filters": {
+            "policy_id": "POL-BILL-014"
+          },
+          "latency_ms": 2.7066,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.5385,
+            "groundedness": 0.9937,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "specific-002",
+          "query": "According to POL-OPS-009, when should an outage be escalated to the Incident Commander or Service Reliability Lead?",
+          "configuration": "vector",
+          "answer": "al intervention outside normal service operations and formal approval is documented.\n\nAny exception must be tracked in the incident record and communicated to the support lead to prevent inconsistent case handling.\n\n## Escalation guidance\n\nEscalate to the Incident Commander or Service Reliability Lead when:\n- the outage impacts multiple customers or regions;\n- customer traffic exceeds established thresholds for an outage event;\n- there is a risk to sensitive data, compliance obligations, or lega to sensitive data, compliance obligations, or legal reporting requirements;\n- the support team cannot provide a stable explanation, workaround, or restoration timeline.\n\nEscalate to Engineering and Customer Experience leadership when broader trust or revenue impact is expected. Include the incident ID, affected services, customer impact summary, known workarounds, and all outstanding questions in the escalation so that the next team can proceed without delay. localized incident.\n3. If affected customers are requesting assistance, document the exact symptoms they are experiencing and any workaround they have already attempted.\n4. Communicate the current status to the customer using approved wording that confirms the existence of an incident, describes the expected impact, and provides a known workaround or estimated restoration timeline when available.\n5. Retain a single source of truth for the incident status and update the customer-facing status pag t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o Sources: POL-OPS-009.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "36115842-6920-5e57-8ba9-aab79e454212",
+            "88d404e5-5cc1-5cb9-943d-cfc294d608f1",
+            "50206ad3-2b28-55d3-a456-82e1614e59ec",
+            "cdd6a438-3644-5fb5-8344-aab86be7a956",
+            "4f46d3b1-3fad-547f-939e-5d89a26f4886"
+          ],
+          "retrieved_policy_ids": [
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "36115842-6920-5e57-8ba9-aab79e454212",
+              "policy_id": "POL-OPS-009",
+              "text": "al intervention outside normal service operations and formal approval is documented.\n\nAny exception must be tracked in the incident record and communicated to the support lead to prevent inconsistent case handling.\n\n## Escalation guidance\n\nEscalate to the Incident Commander or Service Reliability Lead when:\n- the outage impacts multiple customers or regions;\n- customer traffic exceeds established thresholds for an outage event;\n- there is a risk to sensitive data, compliance obligations, or lega",
+              "score": 0.534522
+            },
+            {
+              "chunk_id": "88d404e5-5cc1-5cb9-943d-cfc294d608f1",
+              "policy_id": "POL-OPS-009",
+              "text": "to sensitive data, compliance obligations, or legal reporting requirements;\n- the support team cannot provide a stable explanation, workaround, or restoration timeline.\n\nEscalate to Engineering and Customer Experience leadership when broader trust or revenue impact is expected. Include the incident ID, affected services, customer impact summary, known workarounds, and all outstanding questions in the escalation so that the next team can proceed without delay.",
+              "score": 0.368035
+            },
+            {
+              "chunk_id": "50206ad3-2b28-55d3-a456-82e1614e59ec",
+              "policy_id": "POL-OPS-009",
+              "text": "localized incident.\n3. If affected customers are requesting assistance, document the exact symptoms they are experiencing and any workaround they have already attempted.\n4. Communicate the current status to the customer using approved wording that confirms the existence of an incident, describes the expected impact, and provides a known workaround or estimated restoration timeline when available.\n5. Retain a single source of truth for the incident status and update the customer-facing status pag",
+              "score": 0.315791
+            },
+            {
+              "chunk_id": "cdd6a438-3644-5fb5-8344-aab86be7a956",
+              "policy_id": "POL-OPS-009",
+              "text": "t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu",
+              "score": 0.313206
+            },
+            {
+              "chunk_id": "4f46d3b1-3fad-547f-939e-5d89a26f4886",
+              "policy_id": "POL-OPS-009",
+              "text": " ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o",
+              "score": 0.258717
+            }
+          ],
+          "citations": [
+            "POL-OPS-009"
+          ],
+          "expected_evidence": [
+            "the outage impacts multiple customers or regions",
+            "there is a risk to sensitive data, compliance obligations, or legal reporting requirements",
+            "the support team cannot provide a stable explanation, workaround, or restoration timeline"
+          ],
+          "expected_policy_id": "POL-OPS-009",
+          "expected_supported": true,
+          "category": "specific_policy",
+          "filters": {
+            "policy_id": "POL-OPS-009"
+          },
+          "latency_ms": 1.0205,
+          "metrics": {
+            "evidence_hit_rate": 0.6667,
+            "evidence_matches": [
+              "the outage impacts multiple customers or regions",
+              "the support team cannot provide a stable explanation, workaround, or restoration timeline"
+            ],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.8182,
+            "groundedness": 0.9827,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 3
+          }
+        },
+        {
+          "question_id": "unsupported-001",
+          "query": "What is the company policy for reimbursing employee travel expenses?",
+          "configuration": "vector",
+          "answer": "ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den Sources: POL-CUST-027.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "8197341f-dd8c-5ac9-b3c6-a4323f83a7fc",
+            "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+            "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+            "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+            "bf9ca59c-c073-5f51-8c22-2e223ae533d0"
+          ],
+          "retrieved_policy_ids": [
+            "POL-BILL-014",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-CUST-027"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "8197341f-dd8c-5ac9-b3c6-a4323f83a7fc",
+              "policy_id": "POL-BILL-014",
+              "text": "new method was entered and confirm the transaction status.\n6. For retryable failures caused by temporary bank or gateway issues, advise the customer to retry the payment once after the stated waiting period, while ensuring that the case notes reflect the reason for the retry.\n7. If the account is at risk of suspension, inform the customer of the impact and provide the next deadline for payment or manual review.\n8. Record the root cause, customer communication, action taken, and any follow-up dat",
+              "score": 0.334351
+            },
+            {
+              "chunk_id": "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+              "policy_id": "POL-ACC-001",
+              "text": " covers user accounts for digital services, customer portals, mobile apps, and partner-facing login tools where the support team is responsible for account assistance.\n\n## Procedure\n\n1. Receive the request and confirm the channel of contact and the account identifier provided by the customer.\n2. Verify the customer\u2019s identity using at least two independent factors, such as:\n- registered email address or username;\n- phone number associated with the account;\n- customer account number or subscripti",
+              "score": 0.329983
+            },
+            {
+              "chunk_id": "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+              "policy_id": "POL-ACC-001",
+              "text": " to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th",
+              "score": 0.322886
+            },
+            {
+              "chunk_id": "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+              "policy_id": "POL-CUST-027",
+              "text": "ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den",
+              "score": 0.313835
+            },
+            {
+              "chunk_id": "bf9ca59c-c073-5f51-8c22-2e223ae533d0",
+              "policy_id": "POL-CUST-027",
+              "text": "mer-support channels, including voice, chat, email, and self-service escalations.\n\n## Procedure\n\n1. Collect the customer\u2019s account details, service order or invoice number, and the reason for the refund request.\n2. Confirm whether the issue is within the refund eligibility window, the service category, and any exclusion rules listed in the customer agreement or product terms.\n3. Review whether the customer has already received a partial credit, account adjustment, or prior refund for the same in",
+              "score": 0.309208
+            }
+          ],
+          "citations": [
+            "POL-CUST-027"
+          ],
+          "expected_evidence": [],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "unsupported",
+          "filters": {},
+          "latency_ms": 0.8617,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.1667,
+            "groundedness": 0.9375,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 0
+          }
+        },
+        {
+          "question_id": "unsupported-002",
+          "query": "Which support policy defines the warehouse shipping address and delivery zones?",
+          "configuration": "vector",
+          "answer": "covers user accounts for digital services, customer portals, mobile apps, and partner-facing login tools where the support team is responsible for account assistance.\n\n## Procedure\n\n1. Receive the request and confirm the channel of contact and the account identifier provided by the customer.\n2. Verify the customer\u2019s identity using at least two independent factors, such as:\n- registered email address or username;\n- phone number associated with the account;\n- customer account number or subscripti and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept # Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu # Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next Sources: POL-ACC-001, POL-CUST-027, POL-OPS-009, POL-BILL-014.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+            "36652783-7486-5302-996a-3244ba309535",
+            "301a578f-5c28-5a88-a86d-01ef071651d8",
+            "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+            "fdeaad77-3bc4-516f-a8ec-985a1def2d54"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-OPS-009",
+            "POL-BILL-014",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+              "policy_id": "POL-ACC-001",
+              "text": " covers user accounts for digital services, customer portals, mobile apps, and partner-facing login tools where the support team is responsible for account assistance.\n\n## Procedure\n\n1. Receive the request and confirm the channel of contact and the account identifier provided by the customer.\n2. Verify the customer\u2019s identity using at least two independent factors, such as:\n- registered email address or username;\n- phone number associated with the account;\n- customer account number or subscripti",
+              "score": 0.397523
+            },
+            {
+              "chunk_id": "36652783-7486-5302-996a-3244ba309535",
+              "policy_id": "POL-CUST-027",
+              "text": " and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept",
+              "score": 0.396424
+            },
+            {
+              "chunk_id": "301a578f-5c28-5a88-a86d-01ef071651d8",
+              "policy_id": "POL-OPS-009",
+              "text": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio",
+              "score": 0.394405
+            },
+            {
+              "chunk_id": "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+              "policy_id": "POL-BILL-014",
+              "text": "and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu",
+              "score": 0.388514
+            },
+            {
+              "chunk_id": "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+              "policy_id": "POL-BILL-014",
+              "text": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next",
+              "score": 0.380216
+            }
+          ],
+          "citations": [
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-OPS-009",
+            "POL-BILL-014"
+          ],
+          "expected_evidence": [],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "unsupported",
+          "filters": {},
+          "latency_ms": 1.5127,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.5,
+            "groundedness": 0.9702,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 0
+          }
+        },
+        {
+          "question_id": "ambiguous-001",
+          "query": "What should support do when access is blocked?",
+          "configuration": "vector",
+          "answer": "nd approving contact.\n6. For any access change to billing, service configuration, or personal data, confirm the customer\u2019s intent and log the action in the case record.\n7. If access is granted temporarily, set a validity window and notify the customer of the expiration terms.\n8. When an account is compromised or a suspicious access event is observed, disable or limit access immediately and start an account security review.\n\n## Exceptions\n\nExceptions may be permitted when:\n- a legal representativ ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau e account has any active access restrictions, fraud flags, security challenge states, or prior approval records.\n4. If the request is reasonable and validated, grant the lowest level of access needed to complete the task. Avoid broad administrative access unless specifically required for service recovery or troubleshooting.\n5. For delegated access requests, validate the relationship, document the scope of authority, and record the approval time and approving contact.\n6. For any access change to validated support case and documented manual review.\n\nAny exception must be documented in writing, time-stamped, and approved before the reset is completed. Unsupported deviations are considered policy violations.\n\n## Escalation guidance\n\nEscalate to the IAM or Security Operations team when:\n- the customer cannot satisfy identity verification requirements;\n- the account shows signs of compromise, phishing, or unauthorized access;\n- multiple reset attempts are made from different devices or geogr Sources: POL-ACC-002, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "7890f4df-fa5d-5275-802d-1cf1da21b145",
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "ac4ae42d-3551-5ee7-b05f-a1aa0b744f15",
+            "0b7ad189-4b4d-5aca-9245-0657152c6448"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "7890f4df-fa5d-5275-802d-1cf1da21b145",
+              "policy_id": "POL-ACC-002",
+              "text": "nd approving contact.\n6. For any access change to billing, service configuration, or personal data, confirm the customer\u2019s intent and log the action in the case record.\n7. If access is granted temporarily, set a validity window and notify the customer of the expiration terms.\n8. When an account is compromised or a suspicious access event is observed, disable or limit access immediately and start an account security review.\n\n## Exceptions\n\nExceptions may be permitted when:\n- a legal representativ",
+              "score": 0.267971
+            },
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.200739
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.199557
+            },
+            {
+              "chunk_id": "ac4ae42d-3551-5ee7-b05f-a1aa0b744f15",
+              "policy_id": "POL-ACC-002",
+              "text": "e account has any active access restrictions, fraud flags, security challenge states, or prior approval records.\n4. If the request is reasonable and validated, grant the lowest level of access needed to complete the task. Avoid broad administrative access unless specifically required for service recovery or troubleshooting.\n5. For delegated access requests, validate the relationship, document the scope of authority, and record the approval time and approving contact.\n6. For any access change to ",
+              "score": 0.199431
+            },
+            {
+              "chunk_id": "0b7ad189-4b4d-5aca-9245-0657152c6448",
+              "policy_id": "POL-ACC-001",
+              "text": "validated support case and documented manual review.\n\nAny exception must be documented in writing, time-stamped, and approved before the reset is completed. Unsupported deviations are considered policy violations.\n\n## Escalation guidance\n\nEscalate to the IAM or Security Operations team when:\n- the customer cannot satisfy identity verification requirements;\n- the account shows signs of compromise, phishing, or unauthorized access;\n- multiple reset attempts are made from different devices or geogr",
+              "score": 0.176777
+            }
+          ],
+          "citations": [
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Customer Password Reset Standard covers password recovery and identity verification",
+            "Customer Account Access and Authorization Standard covers access permissions and restrictions"
+          ],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "ambiguous",
+          "filters": {},
+          "latency_ms": 0.9828,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.5,
+            "groundedness": 0.977,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        }
+      ],
+      "summary": {
+        "evidence_hit_rate": 0.1597,
+        "retrieval_relevance": 0.5333,
+        "expected_policy_retrieval_rate": 0.75,
+        "answer_relevance": 0.565,
+        "groundedness": 0.9762,
+        "citation_source_coverage": 0.75,
+        "refusal_correctness": 0.75,
+        "average_latency_ms": 1.3089
+      }
+    },
+    {
+      "name": "hybrid_reranked",
+      "top_k": 5,
+      "reranking_enabled": true,
+      "results": [
+        {
+          "question_id": "factual-001",
+          "query": "How many independent identity factors must support verify before resetting a password?",
+          "configuration": "hybrid_reranked",
+          "answer": "must be time-limited, logged, and reviewed within the next support cycle. Any unapproved exception is treated as a policy breach.\n\n## Escalation guidance\n\nEscalate to the IAM team when:\n- a customer asks for access to another person\u2019s account without documented authorization;\n- there are signs of credential theft, password spraying, suspicious login automation, or account takeover;\n- the account has multiple failed identity checks across different channels;\n- a support agent cannot confirm the r to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau covers user accounts for digital services, customer portals, mobile apps, and partner-facing login tools where the support team is responsible for account assistance.\n\n## Procedure\n\n1. Receive the request and confirm the channel of contact and the account identifier provided by the customer.\n2. Verify the customer\u2019s identity using at least two independent factors, such as:\n- registered email address or username;\n- phone number associated with the account;\n- customer account number or subscripti # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th Sources: POL-ACC-002, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "2b1cbce0-3321-57fa-87c2-7429d78cf646",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "2f5c06c6-c3d7-5b21-8484-a049ddceca5c"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "2b1cbce0-3321-57fa-87c2-7429d78cf646",
+              "policy_id": "POL-ACC-002",
+              "text": "must be time-limited, logged, and reviewed within the next support cycle. Any unapproved exception is treated as a policy breach.\n\n## Escalation guidance\n\nEscalate to the IAM team when:\n- a customer asks for access to another person\u2019s account without documented authorization;\n- there are signs of credential theft, password spraying, suspicious login automation, or account takeover;\n- the account has multiple failed identity checks across different channels;\n- a support agent cannot confirm the r",
+              "score": 0.849345
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.844751
+            },
+            {
+              "chunk_id": "e8678bb8-227c-512e-aa99-7b4052b8ca9c",
+              "policy_id": "POL-ACC-001",
+              "text": " covers user accounts for digital services, customer portals, mobile apps, and partner-facing login tools where the support team is responsible for account assistance.\n\n## Procedure\n\n1. Receive the request and confirm the channel of contact and the account identifier provided by the customer.\n2. Verify the customer\u2019s identity using at least two independent factors, such as:\n- registered email address or username;\n- phone number associated with the account;\n- customer account number or subscripti",
+              "score": 0.656367
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.712931
+            },
+            {
+              "chunk_id": "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+              "policy_id": "POL-ACC-001",
+              "text": " to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th",
+              "score": 0.660585
+            }
+          ],
+          "citations": [
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Verify the customer\u2019s identity using at least two independent factors"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 7.217,
+          "metrics": {
+            "evidence_hit_rate": 1.0,
+            "evidence_matches": [
+              "Verify the customer\u2019s identity using at least two independent factors"
+            ],
+            "retrieval_relevance": 0.6,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.8,
+            "groundedness": 0.9882,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "factual-002",
+          "query": "What should the customer-facing status page represent during a service outage?",
+          "configuration": "hybrid_reranked",
+          "answer": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu d incidents, update customers on the current status at scheduled intervals and escalate to engineering leadership if the timeline or risk impact changes materially.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer is in a region or environment not covered by the normal outage monitoring tools;\n- the outage is caused by a third-party provider and the service owner is awaiting vendor confirmation;\n- a temporary workaround requires manual intervention outside normal service operations next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie Sources: POL-OPS-009, POL-CUST-027, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "301a578f-5c28-5a88-a86d-01ef071651d8",
+            "cdd6a438-3644-5fb5-8344-aab86be7a956",
+            "04a9356d-377c-5123-b3d2-a3961e74218e",
+            "b3306896-b1e2-51ae-9298-6060c0925e6a",
+            "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc"
+          ],
+          "retrieved_policy_ids": [
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-CUST-027",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "301a578f-5c28-5a88-a86d-01ef071651d8",
+              "policy_id": "POL-OPS-009",
+              "text": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio",
+              "score": 0.93755
+            },
+            {
+              "chunk_id": "cdd6a438-3644-5fb5-8344-aab86be7a956",
+              "policy_id": "POL-OPS-009",
+              "text": "t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu",
+              "score": 0.835955
+            },
+            {
+              "chunk_id": "04a9356d-377c-5123-b3d2-a3961e74218e",
+              "policy_id": "POL-OPS-009",
+              "text": "d incidents, update customers on the current status at scheduled intervals and escalate to engineering leadership if the timeline or risk impact changes materially.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer is in a region or environment not covered by the normal outage monitoring tools;\n- the outage is caused by a third-party provider and the service owner is awaiting vendor confirmation;\n- a temporary workaround requires manual intervention outside normal service operations ",
+              "score": 0.784619
+            },
+            {
+              "chunk_id": "b3306896-b1e2-51ae-9298-6060c0925e6a",
+              "policy_id": "POL-CUST-027",
+              "text": "next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g",
+              "score": 0.587273
+            },
+            {
+              "chunk_id": "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+              "policy_id": "POL-ACC-001",
+              "text": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie",
+              "score": 0.571382
+            }
+          ],
+          "citations": [
+            "POL-OPS-009",
+            "POL-CUST-027",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Retain a single source of truth for the incident status",
+            "update the customer-facing status page or support queues"
+          ],
+          "expected_policy_id": "POL-OPS-009",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 4.7278,
+          "metrics": {
+            "evidence_hit_rate": 0.5,
+            "evidence_matches": [
+              "update the customer-facing status page or support queues"
+            ],
+            "retrieval_relevance": 0.6,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.75,
+            "groundedness": 0.9721,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "factual-003",
+          "query": "Who may approve a documented goodwill refund adjustment?",
+          "configuration": "hybrid_reranked",
+          "answer": "lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den # Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie Sources: POL-CUST-027, POL-ACC-002, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f",
+            "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+            "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+            "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc"
+          ],
+          "retrieved_policy_ids": [
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f",
+              "policy_id": "POL-CUST-027",
+              "text": "lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o",
+              "score": 0.8183
+            },
+            {
+              "chunk_id": "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+              "policy_id": "POL-CUST-027",
+              "text": "ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den",
+              "score": 0.627329
+            },
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.578049
+            },
+            {
+              "chunk_id": "eadc698f-6f58-5fcd-a245-1062fa4b0070",
+              "policy_id": "POL-ACC-002",
+              "text": "ons may be permitted when:\n- a legal representative or authorized person has a verified power of attorney or documented authority to manage the account;\n- a customer is unable to complete MFA because of a temporary device issue and the login challenge is safely validated through a secure recovery path;\n- a support escalation requires a temporary service access override for a regulated account and is approved by an IAM supervisor.\n\nAll exceptions must be time-limited, logged, and reviewed within ",
+              "score": 0.58031
+            },
+            {
+              "chunk_id": "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+              "policy_id": "POL-ACC-001",
+              "text": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie",
+              "score": 0.543252
+            }
+          ],
+          "citations": [
+            "POL-CUST-027",
+            "POL-ACC-002",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "a documented goodwill adjustment is approved by the Customer Resolution Manager"
+          ],
+          "expected_policy_id": "POL-CUST-027",
+          "expected_supported": true,
+          "category": "direct_factual",
+          "filters": {},
+          "latency_ms": 4.4438,
+          "metrics": {
+            "evidence_hit_rate": 1.0,
+            "evidence_matches": [
+              "a documented goodwill adjustment is approved by the Customer Resolution Manager"
+            ],
+            "retrieval_relevance": 0.6,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.7143,
+            "groundedness": 0.9765,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "procedure-001",
+          "query": "What procedure should an agent follow when handling a password reset request?",
+          "configuration": "hybrid_reranked",
+          "answer": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin Sources: POL-ACC-001, POL-ACC-002.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "230d4571-4539-5f22-82d2-38d75bfdb833",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "230d4571-4539-5f22-82d2-38d75bfdb833",
+              "policy_id": "POL-ACC-001",
+              "text": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom",
+              "score": 0.952862
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.940171
+            },
+            {
+              "chunk_id": "2f5c06c6-c3d7-5b21-8484-a049ddceca5c",
+              "policy_id": "POL-ACC-001",
+              "text": " to the verified phone number.\n4. Before performing a reset, review the account for signs of fraud or recent suspicious events such as multiple failed login attempts, login from a new device, or multiple password reset requests within a short period.\n5. Complete the reset via the approved identity workflow. Use a temporary password or secure link that is valid for a single user session and requires password change on next login.\n6. Confirm with the customer that the reset is complete, provide th",
+              "score": 0.882719
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.835067
+            },
+            {
+              "chunk_id": "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e",
+              "policy_id": "POL-ACC-001",
+              "text": "e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin",
+              "score": 0.574401
+            }
+          ],
+          "citations": [
+            "POL-ACC-001",
+            "POL-ACC-002"
+          ],
+          "expected_evidence": [
+            "confirm the channel of contact and the account identifier",
+            "verify the customer\u2019s identity using at least two independent factors",
+            "complete the reset via the approved identity workflow",
+            "record the case ID, verification factors used, date and time of the reset"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "procedure",
+          "filters": {},
+          "latency_ms": 6.4267,
+          "metrics": {
+            "evidence_hit_rate": 0.25,
+            "evidence_matches": [
+              "complete the reset via the approved identity workflow"
+            ],
+            "retrieval_relevance": 0.8,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.875,
+            "groundedness": 0.9883,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 4
+          }
+        },
+        {
+          "question_id": "procedure-002",
+          "query": "What steps should support take after a customer reports a failed payment?",
+          "configuration": "hybrid_reranked",
+          "answer": "and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu - the payment was taken but the customer\u2019s account reflects an unpaid invoice or duplicate charge;\n- the customer disputes the denomination or amount of the charge;\n- the payment provider reports a gateway error, batch hold, or unexplained authorization failure;\n- multiple retries on the same payment method fail in a short time window.\n\nEscalate to the Support Team Lead when the customer is at risk of immediate service interruption and the payment cannot be resolved through standard support acti next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t Sources: POL-BILL-014, POL-CUST-027.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+            "97f2747a-385a-5445-8425-4083dee03723",
+            "b3306896-b1e2-51ae-9298-6060c0925e6a",
+            "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+            "de704ec8-fa97-5489-8afb-fb6357cd4279"
+          ],
+          "retrieved_policy_ids": [
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-CUST-027",
+            "POL-BILL-014",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "80503e04-9f1e-577a-b83d-b17ba11a88e8",
+              "policy_id": "POL-BILL-014",
+              "text": "and provide clear guidance to customers about next steps. The policy is designed to protect customer trust, reduce involuntary service interruptions, and support the correct payment retry or account review workflow.\n\n## Scope\n\nThis policy applies to failed card, bank transfer, direct debit, and digital wallet transactions for customer accounts, recurring subscriptions, and service invoices. It covers support interactions where the customer reports a payment rejection, pending authorization, insu",
+              "score": 0.923865
+            },
+            {
+              "chunk_id": "97f2747a-385a-5445-8425-4083dee03723",
+              "policy_id": "POL-BILL-014",
+              "text": "- the payment was taken but the customer\u2019s account reflects an unpaid invoice or duplicate charge;\n- the customer disputes the denomination or amount of the charge;\n- the payment provider reports a gateway error, batch hold, or unexplained authorization failure;\n- multiple retries on the same payment method fail in a short time window.\n\nEscalate to the Support Team Lead when the customer is at risk of immediate service interruption and the payment cannot be resolved through standard support acti",
+              "score": 0.757017
+            },
+            {
+              "chunk_id": "b3306896-b1e2-51ae-9298-6060c0925e6a",
+              "policy_id": "POL-CUST-027",
+              "text": "next support contact point.\n\n## Exceptions\n\nExceptions to standard eligibility rules may be approved only in these circumstances:\n- a system failure or service outage prevented the customer from using the product or service even though the billing was processed;\n- a duplicate charge, failed authorization, or misapplied invoice created an incorrect financial result;\n- a customer was subjected to a temporary service issue that materially reduced value after the subscription began;\n- a documented g",
+              "score": 0.746598
+            },
+            {
+              "chunk_id": "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+              "policy_id": "POL-BILL-014",
+              "text": "s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win",
+              "score": 0.787374
+            },
+            {
+              "chunk_id": "de704ec8-fa97-5489-8afb-fb6357cd4279",
+              "policy_id": "POL-BILL-014",
+              "text": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t",
+              "score": 0.719368
+            }
+          ],
+          "citations": [
+            "POL-BILL-014",
+            "POL-CUST-027"
+          ],
+          "expected_evidence": [
+            "Confirm the failed transaction details",
+            "Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error",
+            "guide the customer through updating the billing details with a secure verification step",
+            "Record the root cause, customer communication, action taken, and any follow-up date"
+          ],
+          "expected_policy_id": "POL-BILL-014",
+          "expected_supported": true,
+          "category": "procedure",
+          "filters": {},
+          "latency_ms": 4.3239,
+          "metrics": {
+            "evidence_hit_rate": 0.5,
+            "evidence_matches": [
+              "Confirm the failed transaction details",
+              "Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error"
+            ],
+            "retrieval_relevance": 0.8,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.7778,
+            "groundedness": 0.9689,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 4
+          }
+        },
+        {
+          "question_id": "filter-001",
+          "query": "What verification rule applies to password recovery?",
+          "configuration": "hybrid_reranked",
+          "answer": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin he customer that the reset is complete, provide the required next steps, and remind them to enable MFA or device recovery options if available.\n7. Record the case ID, verification factors used, date and time of the reset, agent name, and any follow-up recommendation in the case management system.\n8. Where the account is a high-risk customer record or tied to a regulated service, notify the security or compliance contact per the escalation guidance below.\n\n## Exceptions\n\nExceptions to standard ve e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving Sources: POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "230d4571-4539-5f22-82d2-38d75bfdb833",
+            "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e",
+            "35cf068e-b869-51e1-9c3f-f7aa33db8316",
+            "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+            "f3247dfb-8721-596c-a37b-589408faf6f0"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "230d4571-4539-5f22-82d2-38d75bfdb833",
+              "policy_id": "POL-ACC-001",
+              "text": "vent unauthorized account access while preserving a fast and consistent customer experience for legitimate users. All support interactions involving password recovery must follow the identity checks and logging requirements in this policy.\n\n## Scope\n\nThis policy applies to all customer support agents, team leads, escalation specialists, and any staff member handling password reset requests through phone, email, chat, or self-service workflows. It covers user accounts for digital services, custom",
+              "score": 1.0
+            },
+            {
+              "chunk_id": "a3ea7a50-fe8c-5bee-9d63-5d9f91b40a5e",
+              "policy_id": "POL-ACC-001",
+              "text": "e account;\n- customer account number or subscription ID;\n- one-time verification code sent to the customer\u2019s secure contact method;\n- a knowledge-based challenge only when permitted by the risk policy and recorded in the case notes.\n3. If the customer is unable to complete the verification steps, do not disclose account details or reset the password. Offer a secure alternative such as a one-time code to the registered contact method or a callback to the verified phone number.\n4. Before performin",
+              "score": 0.57032
+            },
+            {
+              "chunk_id": "35cf068e-b869-51e1-9c3f-f7aa33db8316",
+              "policy_id": "POL-ACC-001",
+              "text": "he customer that the reset is complete, provide the required next steps, and remind them to enable MFA or device recovery options if available.\n7. Record the case ID, verification factors used, date and time of the reset, agent name, and any follow-up recommendation in the case management system.\n8. Where the account is a high-risk customer record or tied to a regulated service, notify the security or compliance contact per the escalation guidance below.\n\n## Exceptions\n\nExceptions to standard ve",
+              "score": 0.456791
+            },
+            {
+              "chunk_id": "85083cf7-0ce7-5a6a-b288-08b3ef9afcbc",
+              "policy_id": "POL-ACC-001",
+              "text": "e below.\n\n## Exceptions\n\nExceptions to standard verification are allowed only when approved by the Identity & Access Management team or the Security Operations lead. Examples include:\n- customers with a verified government-issued ID on file and a documented account takeover investigation;\n- accounts impacted by a service outage that blocks the customer from accessing a recovery channel;\n- legacy accounts that cannot complete MFA but have a prior validated support case and documented manual revie",
+              "score": 0.43834
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.376497
+            }
+          ],
+          "citations": [
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Verify the customer\u2019s identity using at least two independent factors"
+          ],
+          "expected_policy_id": "POL-ACC-001",
+          "expected_supported": true,
+          "category": "metadata_filter",
+          "filters": {
+            "category": "Authentication and Access",
+            "status": "Approved"
+          },
+          "latency_ms": 5.3989,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.8,
+            "groundedness": 0.9939,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 1
+          }
+        },
+        {
+          "question_id": "filter-002",
+          "query": "What exception rule applies to customer refunds?",
+          "configuration": "hybrid_reranked",
+          "answer": "ued via the standard channel;\n- multiple charges or duplicate invoice errors appear related to the same order;\n- a charge dispute involves legal, compliance, or financial review concerns.\n\nEscalate to the Customer Resolution Manager when the customer disputes a denial, alleges unfair treatment, or requests a policy exception not clearly covered by the standard criteria. Include the case ID, service details, refund rationale, prior customer communications, and any supporting evidence so the appro # Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o Sources: POL-CUST-027.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "fc6ab35b-66ee-5bfd-9b49-405ec5e202d4",
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+            "36652783-7486-5302-996a-3244ba309535",
+            "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+            "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f"
+          ],
+          "retrieved_policy_ids": [
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027",
+            "POL-CUST-027"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "fc6ab35b-66ee-5bfd-9b49-405ec5e202d4",
+              "policy_id": "POL-CUST-027",
+              "text": "ued via the standard channel;\n- multiple charges or duplicate invoice errors appear related to the same order;\n- a charge dispute involves legal, compliance, or financial review concerns.\n\nEscalate to the Customer Resolution Manager when the customer disputes a denial, alleges unfair treatment, or requests a policy exception not clearly covered by the standard criteria. Include the case ID, service details, refund rationale, prior customer communications, and any supporting evidence so the appro",
+              "score": 0.798063
+            },
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.679065
+            },
+            {
+              "chunk_id": "36652783-7486-5302-996a-3244ba309535",
+              "policy_id": "POL-CUST-027",
+              "text": " and customer preference.\n6. If the request is denied, provide a clear explanation tied to the eligibility criteria and outline any alternative resolution options available to the customer.\n7. Document the customer communication, approval decision, refund reference number, and associated timeline in the case record.\n8. If the refund is delayed beyond the standard processing window, notify the customer with the expected time frame and provide the next support contact point.\n\n## Exceptions\n\nExcept",
+              "score": 0.420688
+            },
+            {
+              "chunk_id": "965685e3-ba4d-5d4d-bef4-bb60db5f3f2d",
+              "policy_id": "POL-CUST-027",
+              "text": "ccount adjustment, or prior refund for the same incident.\n4. Assess whether the root cause is customer error, provider issue, product defect, billing error, or a service outage affecting the promised deliverable.\n5. If the claim qualifies, route the case to the refund approver for the amount and method of reimbursement. Approved refund methods may include credit to the original payment method, account credit, or voucher credit according to policy and customer preference.\n6. If the request is den",
+              "score": 0.297522
+            },
+            {
+              "chunk_id": "b9b14bb9-bb90-509f-a7ae-e7a15b7edc0f",
+              "policy_id": "POL-CUST-027",
+              "text": "lue after the subscription began;\n- a documented goodwill adjustment is approved by the Customer Resolution Manager.\n\nAll exceptions must be approved, reason-coded, and logged in the refund ledger to ensure transparency and future auditability.\n\n## Escalation guidance\n\nEscalate to Finance Operations when:\n- the refund amount exceeds the approval threshold for the support team;\n- the original payment method is unavailable or a refund cannot be issued via the standard channel;\n- multiple charges o",
+              "score": 0.299897
+            }
+          ],
+          "citations": [
+            "POL-CUST-027"
+          ],
+          "expected_evidence": [
+            "Exceptions to standard eligibility rules may be approved only in these circumstances",
+            "All exceptions must be approved, reason-coded, and logged in the refund ledger"
+          ],
+          "expected_policy_id": "POL-CUST-027",
+          "expected_supported": true,
+          "category": "metadata_filter",
+          "filters": {
+            "category": "Customer Resolution and Billing",
+            "policy_id": "POL-CUST-027"
+          },
+          "latency_ms": 6.9316,
+          "metrics": {
+            "evidence_hit_rate": 0.5,
+            "evidence_matches": [
+              "All exceptions must be approved, reason-coded, and logged in the refund ledger"
+            ],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.4,
+            "groundedness": 0.9942,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "specific-001",
+          "query": "Under policy POL-BILL-014, what should happen when a retryable payment failure is caused by a temporary gateway issue?",
+          "configuration": "hybrid_reranked",
+          "answer": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win new method was entered and confirm the transaction status.\n6. For retryable failures caused by temporary bank or gateway issues, advise the customer to retry the payment once after the stated waiting period, while ensuring that the case notes reflect the reason for the retry.\n7. If the account is at risk of suspension, inform the customer of the impact and provide the next deadline for payment or manual review.\n8. Record the root cause, customer communication, action taken, and any follow-up dat - the payment was taken but the customer\u2019s account reflects an unpaid invoice or duplicate charge;\n- the customer disputes the denomination or amount of the charge;\n- the payment provider reports a gateway error, batch hold, or unexplained authorization failure;\n- multiple retries on the same payment method fail in a short time window.\n\nEscalate to the Support Team Lead when the customer is at risk of immediate service interruption and the payment cannot be resolved through standard support acti communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t Sources: POL-BILL-014.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+            "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+            "8197341f-dd8c-5ac9-b3c6-a4323f83a7fc",
+            "97f2747a-385a-5445-8425-4083dee03723",
+            "de704ec8-fa97-5489-8afb-fb6357cd4279"
+          ],
+          "retrieved_policy_ids": [
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+              "policy_id": "POL-BILL-014",
+              "text": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next",
+              "score": 0.825801
+            },
+            {
+              "chunk_id": "fa6e8ccb-adcd-5bf7-89e1-587cd5bd0f89",
+              "policy_id": "POL-BILL-014",
+              "text": "s a payment rejection, pending authorization, insufficient funds, expired payment method, or duplicate transaction concern.\n\n## Procedure\n\n1. Confirm the failed transaction details, including amount, date, payment method, and the customer\u2019s account or invoice reference.\n2. Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error.\n3. Review the account to confirm whether the customer is in a retry win",
+              "score": 0.874803
+            },
+            {
+              "chunk_id": "8197341f-dd8c-5ac9-b3c6-a4323f83a7fc",
+              "policy_id": "POL-BILL-014",
+              "text": "new method was entered and confirm the transaction status.\n6. For retryable failures caused by temporary bank or gateway issues, advise the customer to retry the payment once after the stated waiting period, while ensuring that the case notes reflect the reason for the retry.\n7. If the account is at risk of suspension, inform the customer of the impact and provide the next deadline for payment or manual review.\n8. Record the root cause, customer communication, action taken, and any follow-up dat",
+              "score": 0.516837
+            },
+            {
+              "chunk_id": "97f2747a-385a-5445-8425-4083dee03723",
+              "policy_id": "POL-BILL-014",
+              "text": "- the payment was taken but the customer\u2019s account reflects an unpaid invoice or duplicate charge;\n- the customer disputes the denomination or amount of the charge;\n- the payment provider reports a gateway error, batch hold, or unexplained authorization failure;\n- multiple retries on the same payment method fail in a short time window.\n\nEscalate to the Support Team Lead when the customer is at risk of immediate service interruption and the payment cannot be resolved through standard support acti",
+              "score": 0.447072
+            },
+            {
+              "chunk_id": "de704ec8-fa97-5489-8afb-fb6357cd4279",
+              "policy_id": "POL-BILL-014",
+              "text": "communication, action taken, and any follow-up date in the case record. If a transaction is successfully retried or reprocessed, confirm the updated status to the customer and document the payment reference number.\n\n## Exceptions\n\nExceptions may be approved when:\n- a customer disputes a charge and the billing team confirms a potential duplicate, failed authorization, or incorrect amount;\n- a payment is blocked by a banking regulation, country-specific requirement, or card network issue outside t",
+              "score": 0.538781
+            }
+          ],
+          "citations": [
+            "POL-BILL-014"
+          ],
+          "expected_evidence": [
+            "advise the customer to retry the payment once after the stated waiting period",
+            "case notes reflect the reason for the retry"
+          ],
+          "expected_policy_id": "POL-BILL-014",
+          "expected_supported": true,
+          "category": "specific_policy",
+          "filters": {
+            "policy_id": "POL-BILL-014"
+          },
+          "latency_ms": 5.0135,
+          "metrics": {
+            "evidence_hit_rate": 1.0,
+            "evidence_matches": [
+              "advise the customer to retry the payment once after the stated waiting period",
+              "case notes reflect the reason for the retry"
+            ],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.7692,
+            "groundedness": 0.9937,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        },
+        {
+          "question_id": "specific-002",
+          "query": "According to POL-OPS-009, when should an outage be escalated to the Incident Commander or Service Reliability Lead?",
+          "configuration": "hybrid_reranked",
+          "answer": "al intervention outside normal service operations and formal approval is documented.\n\nAny exception must be tracked in the incident record and communicated to the support lead to prevent inconsistent case handling.\n\n## Escalation guidance\n\nEscalate to the Incident Commander or Service Reliability Lead when:\n- the outage impacts multiple customers or regions;\n- customer traffic exceeds established thresholds for an outage event;\n- there is a risk to sensitive data, compliance obligations, or lega # Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu rt teams, incident managers, service owners, and operational stakeholders responsible for customer communications before, during, and after a service event.\n\n## Procedure\n\n1. Identify the type and scope of the issue using the active incident dashboard, monitoring alerts, and customer reports.\n2. Classify the impact by service area, region, customer segment, and severity level. Confirm whether the issue is a partial degradation, full outage, or a localized incident.\n3. If affected customers are r Sources: POL-OPS-009.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "36115842-6920-5e57-8ba9-aab79e454212",
+            "301a578f-5c28-5a88-a86d-01ef071651d8",
+            "4f46d3b1-3fad-547f-939e-5d89a26f4886",
+            "cdd6a438-3644-5fb5-8344-aab86be7a956",
+            "d8b843e1-de1b-554f-957d-f7412f2007a6"
+          ],
+          "retrieved_policy_ids": [
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009",
+            "POL-OPS-009"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "36115842-6920-5e57-8ba9-aab79e454212",
+              "policy_id": "POL-OPS-009",
+              "text": "al intervention outside normal service operations and formal approval is documented.\n\nAny exception must be tracked in the incident record and communicated to the support lead to prevent inconsistent case handling.\n\n## Escalation guidance\n\nEscalate to the Incident Commander or Service Reliability Lead when:\n- the outage impacts multiple customers or regions;\n- customer traffic exceeds established thresholds for an outage event;\n- there is a risk to sensitive data, compliance obligations, or lega",
+              "score": 1.0
+            },
+            {
+              "chunk_id": "301a578f-5c28-5a88-a86d-01ef071651d8",
+              "policy_id": "POL-OPS-009",
+              "text": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio",
+              "score": 0.438236
+            },
+            {
+              "chunk_id": "4f46d3b1-3fad-547f-939e-5d89a26f4886",
+              "policy_id": "POL-OPS-009",
+              "text": " ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o",
+              "score": 0.399957
+            },
+            {
+              "chunk_id": "cdd6a438-3644-5fb5-8344-aab86be7a956",
+              "policy_id": "POL-OPS-009",
+              "text": "t status and update the customer-facing status page or support queues according to the service reliability playbook.\n6. If the outage is resolved, confirm the restoration steps, ask the customer to re-test access, and document whether the customer needs any follow-up or account validation.\n7. After resolution, review case patterns, capture recurring symptoms, and record any impact that could inform future reliability improvements.\n8. For prolonged incidents, update customers on the current statu",
+              "score": 0.438622
+            },
+            {
+              "chunk_id": "d8b843e1-de1b-554f-957d-f7412f2007a6",
+              "policy_id": "POL-OPS-009",
+              "text": "rt teams, incident managers, service owners, and operational stakeholders responsible for customer communications before, during, and after a service event.\n\n## Procedure\n\n1. Identify the type and scope of the issue using the active incident dashboard, monitoring alerts, and customer reports.\n2. Classify the impact by service area, region, customer segment, and severity level. Confirm whether the issue is a partial degradation, full outage, or a localized incident.\n3. If affected customers are r",
+              "score": 0.276469
+            }
+          ],
+          "citations": [
+            "POL-OPS-009"
+          ],
+          "expected_evidence": [
+            "the outage impacts multiple customers or regions",
+            "there is a risk to sensitive data, compliance obligations, or legal reporting requirements",
+            "the support team cannot provide a stable explanation, workaround, or restoration timeline"
+          ],
+          "expected_policy_id": "POL-OPS-009",
+          "expected_supported": true,
+          "category": "specific_policy",
+          "filters": {
+            "policy_id": "POL-OPS-009"
+          },
+          "latency_ms": 6.3542,
+          "metrics": {
+            "evidence_hit_rate": 0.3333,
+            "evidence_matches": [
+              "the outage impacts multiple customers or regions"
+            ],
+            "retrieval_relevance": 1.0,
+            "expected_policy_retrieved": true,
+            "expected_policy_retrieval_rate": 1.0,
+            "answer_relevance": 0.8182,
+            "groundedness": 0.994,
+            "citation_source_coverage": 1.0,
+            "refusal_correctness": 1.0,
+            "expected_supported": true,
+            "actual_supported": true,
+            "expected_evidence_count": 3
+          }
+        },
+        {
+          "question_id": "unsupported-001",
+          "query": "What is the company policy for reimbursing employee travel expenses?",
+          "configuration": "hybrid_reranked",
+          "answer": "ct reason the policy could not be applied without deviation. # Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving # Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only # Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next Sources: POL-ACC-001, POL-CUST-027, POL-ACC-002, POL-BILL-014.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "0e0db679-17e4-5466-bdbb-67553c64bdd0",
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "aa76c655-0ef2-528b-92e1-981beaee8f52",
+            "fdeaad77-3bc4-516f-a8ec-985a1def2d54"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "0e0db679-17e4-5466-bdbb-67553c64bdd0",
+              "policy_id": "POL-ACC-001",
+              "text": "ct reason the policy could not be applied without deviation.",
+              "score": 0.830913
+            },
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.833313
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.769246
+            },
+            {
+              "chunk_id": "aa76c655-0ef2-528b-92e1-981beaee8f52",
+              "policy_id": "POL-ACC-002",
+              "text": "# Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only ",
+              "score": 0.61786
+            },
+            {
+              "chunk_id": "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+              "policy_id": "POL-BILL-014",
+              "text": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next",
+              "score": 0.550837
+            }
+          ],
+          "citations": [
+            "POL-ACC-001",
+            "POL-CUST-027",
+            "POL-ACC-002",
+            "POL-BILL-014"
+          ],
+          "expected_evidence": [],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "unsupported",
+          "filters": {},
+          "latency_ms": 7.1525,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.1667,
+            "groundedness": 0.9904,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 0
+          }
+        },
+        {
+          "question_id": "unsupported-002",
+          "query": "Which support policy defines the warehouse shipping address and delivery zones?",
+          "configuration": "hybrid_reranked",
+          "answer": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran # Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving # Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only # Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next Sources: POL-CUST-027, POL-OPS-009, POL-ACC-001, POL-ACC-002, POL-BILL-014.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+            "301a578f-5c28-5a88-a86d-01ef071651d8",
+            "f3247dfb-8721-596c-a37b-589408faf6f0",
+            "aa76c655-0ef2-528b-92e1-981beaee8f52",
+            "fdeaad77-3bc4-516f-a8ec-985a1def2d54"
+          ],
+          "retrieved_policy_ids": [
+            "POL-CUST-027",
+            "POL-OPS-009",
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-BILL-014"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "09ebb103-3b3b-5735-a037-6210c6cb70e8",
+              "policy_id": "POL-CUST-027",
+              "text": "# Refund Policy\n\n- Policy ID: POL-CUST-027\n- Policy name: Customer Refund Eligibility and Processing Policy\n- Category: Customer Resolution and Billing\n- Version: 1.8\n- Effective date: 2026-05-05\n- Department: Customer Support and Finance\n- Status: Approved\n- Source: Internal Policy Library / Customer Experience Governance\n\n## Purpose\n\nThis policy defines when a customer may be eligible for a refund, how refund requests are evaluated, and which support actions are allowed before approval is gran",
+              "score": 0.962899
+            },
+            {
+              "chunk_id": "301a578f-5c28-5a88-a86d-01ef071651d8",
+              "policy_id": "POL-OPS-009",
+              "text": "# Service Outage Policy\n\n- Policy ID: POL-OPS-009\n- Policy name: Service Outage Communication and Recovery Standard\n- Category: Service Reliability\n- Version: 5.0\n- Effective date: 2026-04-20\n- Department: Technical Operations and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Service Reliability Team\n\n## Purpose\n\nThis policy defines how service outages are triaged, communicated, and resolved to protect customer trust and ensure a consistent support response during perio",
+              "score": 0.946133
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.773111
+            },
+            {
+              "chunk_id": "aa76c655-0ef2-528b-92e1-981beaee8f52",
+              "policy_id": "POL-ACC-002",
+              "text": "# Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only ",
+              "score": 0.740573
+            },
+            {
+              "chunk_id": "fdeaad77-3bc4-516f-a8ec-985a1def2d54",
+              "policy_id": "POL-BILL-014",
+              "text": "# Payment Failure Policy\n\n- Policy ID: POL-BILL-014\n- Policy name: Payment Failure Resolution and Retry Guidance\n- Category: Billing and Collections\n- Version: 3.1\n- Effective date: 2026-02-10\n- Department: Billing Support and Customer Care\n- Status: Approved\n- Source: Internal Policy Library / Finance Operations\n\n## Purpose\n\nThis policy ensures that customer-support teams handle failed payments consistently, reduce avoidable account disruption, and provide clear guidance to customers about next",
+              "score": 0.734113
+            }
+          ],
+          "citations": [
+            "POL-CUST-027",
+            "POL-OPS-009",
+            "POL-ACC-001",
+            "POL-ACC-002",
+            "POL-BILL-014"
+          ],
+          "expected_evidence": [],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "unsupported",
+          "filters": {},
+          "latency_ms": 7.2236,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.375,
+            "groundedness": 0.9916,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 0
+          }
+        },
+        {
+          "question_id": "ambiguous-001",
+          "query": "What should support do when access is blocked?",
+          "configuration": "hybrid_reranked",
+          "answer": "accounts and support tools. It ensures that only authorized users can access personal data, account controls, and service settings while allowing support teams to resolve legitimate access issues without creating unnecessary risk.\n\n## Scope\n\nThis policy applies to customer accounts, administrator roles, delegated user access, onboarding and offboarding, account recovery, and support scenarios involving account-level permissions. It covers access to customer dashboards, internal support tools, a # Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o # Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving Sources: POL-ACC-002, POL-OPS-009, POL-ACC-001.",
+          "supported": true,
+          "refused": false,
+          "retrieved_chunk_ids": [
+            "d530893a-bb87-53e0-bd67-9cd4e08a582f",
+            "aa76c655-0ef2-528b-92e1-981beaee8f52",
+            "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+            "4f46d3b1-3fad-547f-939e-5d89a26f4886",
+            "f3247dfb-8721-596c-a37b-589408faf6f0"
+          ],
+          "retrieved_policy_ids": [
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-ACC-002",
+            "POL-OPS-009",
+            "POL-ACC-001"
+          ],
+          "retrieved_evidence": [
+            {
+              "chunk_id": "d530893a-bb87-53e0-bd67-9cd4e08a582f",
+              "policy_id": "POL-ACC-002",
+              "text": " accounts and support tools. It ensures that only authorized users can access personal data, account controls, and service settings while allowing support teams to resolve legitimate access issues without creating unnecessary risk.\n\n## Scope\n\nThis policy applies to customer accounts, administrator roles, delegated user access, onboarding and offboarding, account recovery, and support scenarios involving account-level permissions. It covers access to customer dashboards, internal support tools, a",
+              "score": 0.862506
+            },
+            {
+              "chunk_id": "aa76c655-0ef2-528b-92e1-981beaee8f52",
+              "policy_id": "POL-ACC-002",
+              "text": "# Account Access Policy\n\n- Policy ID: POL-ACC-002\n- Policy name: Customer Account Access and Authorization Standard\n- Category: Identity and Access Management\n- Version: 4.2\n- Effective date: 2026-03-01\n- Department: Identity Access Management and Customer Support\n- Status: Approved\n- Source: Internal Policy Library / Governance and Security\n\n## Purpose\n\nThis policy establishes the rules for granting, verifying, and restricting access to customer accounts and support tools. It ensures that only ",
+              "score": 0.864605
+            },
+            {
+              "chunk_id": "e56c6dbd-feb1-5870-9295-a45c91d06be6",
+              "policy_id": "POL-ACC-002",
+              "text": " to customer dashboards, internal support tools, and any records associated with an account profile, including payment history, service settings, and case records.\n\n## Procedure\n\n1. Confirm the user\u2019s identity and authority before discussing or changing access permissions.\n2. Verify whether the request is for the account owner, a delegated family member, a business administrator, or a support agent handling a third-party case.\n3. Check whether the account has any active access restrictions, frau",
+              "score": 0.778973
+            },
+            {
+              "chunk_id": "4f46d3b1-3fad-547f-939e-5d89a26f4886",
+              "policy_id": "POL-OPS-009",
+              "text": " ensure a consistent support response during periods of service disruption. It aligns support actions with engineering incident workflows and helps customers receive accurate, timely guidance when availability or performance is impacted.\n\n## Scope\n\nThis policy applies to any customer-impacting outage, degradation, or scheduled maintenance affecting service availability, performance, integrations, portal access, or API reliability. It covers support teams, incident managers, service owners, and o",
+              "score": 0.732251
+            },
+            {
+              "chunk_id": "f3247dfb-8721-596c-a37b-589408faf6f0",
+              "policy_id": "POL-ACC-001",
+              "text": "# Password Reset Policy\n\n- Policy ID: POL-ACC-001\n- Policy name: Customer Password Reset Standard\n- Category: Authentication and Access\n- Version: 2.4\n- Effective date: 2026-01-15\n- Department: Customer Support Operations\n- Status: Approved\n- Source: Internal Policy Library / Identity & Access Management\n\n## Purpose\n\nThis policy defines how customer-support teams verify and process password reset requests for customer accounts. The goal is to prevent unauthorized account access while preserving ",
+              "score": 0.714503
+            }
+          ],
+          "citations": [
+            "POL-ACC-002",
+            "POL-OPS-009",
+            "POL-ACC-001"
+          ],
+          "expected_evidence": [
+            "Customer Password Reset Standard covers password recovery and identity verification",
+            "Customer Account Access and Authorization Standard covers access permissions and restrictions"
+          ],
+          "expected_policy_id": null,
+          "expected_supported": false,
+          "category": "ambiguous",
+          "filters": {},
+          "latency_ms": 8.4944,
+          "metrics": {
+            "evidence_hit_rate": 0.0,
+            "evidence_matches": [],
+            "retrieval_relevance": 0.0,
+            "expected_policy_retrieved": false,
+            "expected_policy_retrieval_rate": 0.0,
+            "answer_relevance": 0.5,
+            "groundedness": 0.9799,
+            "citation_source_coverage": 0.0,
+            "refusal_correctness": 0.0,
+            "expected_supported": false,
+            "actual_supported": true,
+            "expected_evidence_count": 2
+          }
+        }
+      ],
+      "summary": {
+        "evidence_hit_rate": 0.4236,
+        "retrieval_relevance": 0.6167,
+        "expected_policy_retrieval_rate": 0.75,
+        "answer_relevance": 0.6455,
+        "groundedness": 0.986,
+        "citation_source_coverage": 0.75,
+        "refusal_correctness": 0.75,
+        "average_latency_ms": 6.1423
+      }
+    }
+  ],
+  "qualitative_observations": [
+    "Metrics are measured independently for each configuration and are not used to declare a winner.",
+    "Answer-level scores use the deterministic evaluator answer built from retrieved evidence; they are not measurements from an external LLM.",
+    "Latency includes retrieval and optional reranking, but excludes corpus loading and index construction."
+  ]
+}

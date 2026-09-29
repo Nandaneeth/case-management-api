@@ -24,7 +24,7 @@ def summarize_standardized_cases(dataframe: DataFrame) -> DataFrame:
 		F.col("case_number").isNotNull()
 		& F.col("status").isNotNull()
 		& F.col("priority").isNotNull()
-		& F.length(F.trim(F.col("case_number"))) > 0
+		& (F.length(F.trim(F.col("case_number"))) > 0)
 	)
 
 	latest_window = Window.partitionBy("case_number").orderBy(

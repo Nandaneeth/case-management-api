@@ -19,7 +19,17 @@ class JsonFormatter(logging.Formatter):
             "message": record.getMessage(),
         }
 
-        for field in ("event", "case_id", "count", "fields"):
+        for field in (
+            "event",
+            "case_id",
+            "count",
+            "fields",
+            "question_length",
+            "filters",
+            "top_k",
+            "supported",
+            "source_count",
+        ):
             if hasattr(record, field):
                 payload[field] = getattr(record, field)
 

@@ -1,0 +1,157 @@
+{
+  "dataset_id": "customer-support-policy-rag-v1",
+  "description": "Deterministic evaluation questions for the local customer-support policy corpus.",
+  "source_directory": "data/policies",
+  "records": [
+    {
+      "question_id": "factual-001",
+      "question": "How many independent identity factors must support verify before resetting a password?",
+      "expected_policy_id": "POL-ACC-001",
+      "expected_evidence": [
+        "Verify the customer’s identity using at least two independent factors"
+      ],
+      "expected_supported": true,
+      "category": "direct_factual",
+      "filters": {}
+    },
+    {
+      "question_id": "factual-002",
+      "question": "What should the customer-facing status page represent during a service outage?",
+      "expected_policy_id": "POL-OPS-009",
+      "expected_evidence": [
+        "Retain a single source of truth for the incident status",
+        "update the customer-facing status page or support queues"
+      ],
+      "expected_supported": true,
+      "category": "direct_factual",
+      "filters": {}
+    },
+    {
+      "question_id": "factual-003",
+      "question": "Who may approve a documented goodwill refund adjustment?",
+      "expected_policy_id": "POL-CUST-027",
+      "expected_evidence": [
+        "a documented goodwill adjustment is approved by the Customer Resolution Manager"
+      ],
+      "expected_supported": true,
+      "category": "direct_factual",
+      "filters": {}
+    },
+    {
+      "question_id": "procedure-001",
+      "question": "What procedure should an agent follow when handling a password reset request?",
+      "expected_policy_id": "POL-ACC-001",
+      "expected_evidence": [
+        "confirm the channel of contact and the account identifier",
+        "verify the customer’s identity using at least two independent factors",
+        "complete the reset via the approved identity workflow",
+        "record the case ID, verification factors used, date and time of the reset"
+      ],
+      "expected_supported": true,
+      "category": "procedure",
+      "filters": {}
+    },
+    {
+      "question_id": "procedure-002",
+      "question": "What steps should support take after a customer reports a failed payment?",
+      "expected_policy_id": "POL-BILL-014",
+      "expected_evidence": [
+        "Confirm the failed transaction details",
+        "Determine whether the failure is due to a bank decline, card rejection, expired payment method, authorization issue, or system-side payment gateway error",
+        "guide the customer through updating the billing details with a secure verification step",
+        "Record the root cause, customer communication, action taken, and any follow-up date"
+      ],
+      "expected_supported": true,
+      "category": "procedure",
+      "filters": {}
+    },
+    {
+      "question_id": "filter-001",
+      "question": "What verification rule applies to password recovery?",
+      "expected_policy_id": "POL-ACC-001",
+      "expected_evidence": [
+        "Verify the customer’s identity using at least two independent factors"
+      ],
+      "expected_supported": true,
+      "category": "metadata_filter",
+      "filters": {
+        "category": "Authentication and Access",
+        "status": "Approved"
+      }
+    },
+    {
+      "question_id": "filter-002",
+      "question": "What exception rule applies to customer refunds?",
+      "expected_policy_id": "POL-CUST-027",
+      "expected_evidence": [
+        "Exceptions to standard eligibility rules may be approved only in these circumstances",
+        "All exceptions must be approved, reason-coded, and logged in the refund ledger"
+      ],
+      "expected_supported": true,
+      "category": "metadata_filter",
+      "filters": {
+        "category": "Customer Resolution and Billing",
+        "policy_id": "POL-CUST-027"
+      }
+    },
+    {
+      "question_id": "specific-001",
+      "question": "Under policy POL-BILL-014, what should happen when a retryable payment failure is caused by a temporary gateway issue?",
+      "expected_policy_id": "POL-BILL-014",
+      "expected_evidence": [
+        "advise the customer to retry the payment once after the stated waiting period",
+        "case notes reflect the reason for the retry"
+      ],
+      "expected_supported": true,
+      "category": "specific_policy",
+      "filters": {
+        "policy_id": "POL-BILL-014"
+      }
+    },
+    {
+      "question_id": "specific-002",
+      "question": "According to POL-OPS-009, when should an outage be escalated to the Incident Commander or Service Reliability Lead?",
+      "expected_policy_id": "POL-OPS-009",
+      "expected_evidence": [
+        "the outage impacts multiple customers or regions",
+        "there is a risk to sensitive data, compliance obligations, or legal reporting requirements",
+        "the support team cannot provide a stable explanation, workaround, or restoration timeline"
+      ],
+      "expected_supported": true,
+      "category": "specific_policy",
+      "filters": {
+        "policy_id": "POL-OPS-009"
+      }
+    },
+    {
+      "question_id": "unsupported-001",
+      "question": "What is the company policy for reimbursing employee travel expenses?",
+      "expected_policy_id": null,
+      "expected_evidence": [],
+      "expected_supported": false,
+      "category": "unsupported",
+      "filters": {}
+    },
+    {
+      "question_id": "unsupported-002",
+      "question": "Which support policy defines the warehouse shipping address and delivery zones?",
+      "expected_policy_id": null,
+      "expected_evidence": [],
+      "expected_supported": false,
+      "category": "unsupported",
+      "filters": {}
+    },
+    {
+      "question_id": "ambiguous-001",
+      "question": "What should support do when access is blocked?",
+      "expected_policy_id": null,
+      "expected_evidence": [
+        "Customer Password Reset Standard covers password recovery and identity verification",
+        "Customer Account Access and Authorization Standard covers access permissions and restrictions"
+      ],
+      "expected_supported": false,
+      "category": "ambiguous",
+      "filters": {}
+    }
+  ]
+}
